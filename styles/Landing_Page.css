@@ -1,0 +1,99 @@
+.hero_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.main_text{
+    font-weight: bold;
+    color: #f6f5f6;
+    text-transform: uppercase;
+}
+.sec_text{
+    color: #f6f5f6;
+    text-transform: uppercase;
+}
+.sec_text_dark{
+    color: #2C3340;
+    text-transform: uppercase;
+}
+.content_text{
+    color: #f6f5f6;
+    font-weight: lighter;
+    
+}
+.content_text_dark{
+    color: #2C3340;
+    font-weight: lighter;
+    
+}
+.scroll_container{
+    height: 50rem;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    position: absolute; 
+    left: 0;
+    bottom: 0;
+}
+.scroll_bar{
+    position: absolute; 
+    top: 0;
+    left: 0.2rem;
+    width:0.2rem;
+    border-radius: 1rem;
+    background-color: #f67247;
+   animation: scroll_bar_anim 20s ease-in-out 3s infinite ;
+   animation-direction: alternate-reverse;
+}
+
+.scroll_text{
+    position: absolute; 
+    left: -1.25rem;
+ 
+    text-transform: uppercase;
+    font-weight:lighter;
+    transform: rotate(90deg);
+    color: #f6f5f6;
+       animation: scroll_text_anim 5s ease-in-out 3s infinite ;
+}
+
+.accent_container{
+    background-color: #f67247;
+    padding: 10px 20px;
+    transition: all ease-in-out 0.2s;
+}
+.accent_container:hover{
+    background-color: #f67247;
+    transform: scale(1.05);
+}
+@media screen and (min-width:768px) {
+    .scroll_text{
+        position: absolute; 
+        left: 0rem;
+        text-transform: uppercase;
+        font-weight:lighter;
+        transform: rotate(90deg);
+        color: #f6f5f6;
+        animation: scroll_text_anim 10s ease-in-out 3s infinite ;
+    }
+}
+@keyframes scroll_bar_anim {
+    0%{
+        height: 0rem;
+    }
+    100%{
+        height:50rem;
+    }
+    
+}
+@keyframes scroll_text_anim {
+    0%{
+        top: 0rem;
+    }
+    100%{
+     top: 10rem;
+    }
+    
+}
