@@ -8,7 +8,7 @@ export default function Loader() {
     useEffect(() => {
         gsap.to(".block-left", { left: "-50%", ease: Expo.easeInOut, delay: 1, duration: 3, })
         gsap.to(".block-right", { right: "-50%", ease: Expo.easeInOut, delay: 1, duration: 3, })
-        gsap.to(".container", { zIndex: '-1', ease: Expo.easeInOut, delay: 3, duration: 3, })
+        gsap.to(".container", { zIndex: '-1', ease: Expo.easeInOut, delay: 2, duration: 3, })
     }, [])
 
     return (

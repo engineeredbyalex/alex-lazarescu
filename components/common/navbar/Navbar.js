@@ -1,64 +1,56 @@
 import Link from "next/link";
-import { BiMenu } from "react-icons/bi";
 import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { Expo } from "gsap";
 import Center from "../layout/Center";
 
+
 export default function NavBar() {
-    const [toggle, setToggle] = useState(false);
 
+    const [isToggled, setIsToggled] = useState()
     useEffect(() => {
-        const navBar = document.querySelector(".navigation_bar");
-        const navLinks = document.querySelectorAll(".navigation_bar_link");
+        const navigationBarMenu = document.querySelector(".navigation_bar_menu");
+        const naviagtionMenu = document.querySelector(".naviagtion_menu");
 
-        const toggleAnimation = () => {
-            const easeType = toggle ? Expo.easeInOut : Expo.easeInOut;
-            const height = toggle ? "100vh" : "13vh";
-            const backgroundColor = toggle ? "#2c3340" : "#2c3340";
-            const left = toggle ? "50px" : "-100%";
-            const duration_nav = toggle ? "1" : "1";
-            const delay = toggle ? "0" : "2"
-            const duration_links = toggle ? "2" : "1";
-
-            gsap.to(navBar, { height, backgroundColor, ease: easeType, duration: duration_nav, delay });
-            gsap.to(navLinks, { left, ease: easeType, duration: duration_links, stagger: 0.1 });
-        };
-
-        toggleAnimation();
-    }, [toggle]);
+        if (isToggled) {
+            gsap.to(navigationBarMenu, { left: "0rem", ease: Expo.easeInOut, duration: 1, delay: 2 });
+            gsap.to(".navigation_bar", { height: "100vh", ease: Expo.easeInOut, duration: 1 });
+            gsap.to(".navigation_bar", { background: "#000", ease: Expo.easeInOut, duration: 1 });
+            gsap.to(".naviagtion_menu_line", { background: "#FF9B16", ease: Expo.easeInOut, duration: 1, delay: 2 });
+        } else {
+            gsap.to(navigationBarMenu, { left: "-10rem", ease: Expo.easeInOut, duration: 1, });
+            gsap.to(".navigation_bar", { height: "100px", ease: Expo.easeInOut, duration: 1, delay: 2 });
+            gsap.to(".navigation_bar", { background: "transparent", ease: Expo.easeInOut, duration: 1, delay: 2 });
+            gsap.to(".naviagtion_menu_line", { background: "#fff", ease: Expo.easeInOut, duration: 1 });
+        }
+    }, [isToggled]);
 
     return (
-        <div className={`navigation_bar ${toggle ? "expanded" : ""}`}>
+        <nav className="navigation_bar">
             <Center>
                 <div className="navigation_bar_container">
-                    <button onClick={() => setToggle(!toggle)} className="navigation_menu_button">
-                        <span className="navigation_menu_line" />
-                        <span className="navigation_menu_line" />
-                        <span className="navigation_menu_line" />
-                    </button>
-                </div>
-                <div className="navigation_bar_links">
-                    <Link href={"/"} className="navigation_bar_link link link_1">
-                        <h4>Acasă</h4>
-                    </Link>
-                    <Link href={"/"} className="navigation_bar_link link link_2">
-                        <h4>Despre Mine</h4>
-                    </Link>
-                    <Link href={"/"} className="navigation_bar_link link link_3">
-                        <h4>Portofoliu</h4>
-                    </Link>
-                    <Link href={"/"} className="navigation_bar_link link link_4">
-                        <h4>Magazin</h4>
-                    </Link>
-                    <Link href={"/"} className="navigation_bar_link link link_5">
-                        <h4>Servicii</h4>
-                    </Link>
-                    <Link href={"/"} className="navigation_bar_link link link_6">
-                        <h4>Blog</h4>
-                    </Link>
+                    <div onClick={() => setIsToggled(!isToggled)} className='navigation_menu_container'>
+                        <div className='naviagtion_menu'>
+                            <span className='naviagtion_menu_line'></span>
+                            <span className='naviagtion_menu_line'></span>
+                            <span className='naviagtion_menu_line'></span>
+                        </div>
+                    </div>
                 </div>
             </Center>
-        </div>
+            <div className="navigation_bar_menu">
+                <Center>
+                    <li className="navigation_bar_list">
+                        <Link className="navigation_bar_list_link" href={'/'}><h3>Test</h3></Link>
+                        <Link className="navigation_bar_list_link" href={'/'}><h3>Test</h3></Link>
+                        <Link className="navigation_bar_list_link" href={'/'}><h3>Test</h3></Link>
+                        <Link className="navigation_bar_list_link" href={'/'}><h3>Test</h3></Link>
+                        <Link className="navigation_bar_list_link" href={'/'}><h3>Test</h3></Link>
+                        <Link className="navigation_bar_list_link" href={'/'}><h3>Test</h3></Link>
+                    </li>
+
+                </Center>
+            </div>
+        </nav>
     );
 }

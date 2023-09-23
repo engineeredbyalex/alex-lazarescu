@@ -3,9 +3,7 @@ import React from 'react'
 
 function Main_Button(props) {
     return (
-        <Link className='main_button' href={props.link}>
-            {props.text}
-        </Link>
+        <Link className='button button_main' href={`${props.link}`}>{props.content}</Link>
     )
 }
 

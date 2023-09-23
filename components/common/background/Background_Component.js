@@ -2,9 +2,7 @@
 function Background_Component() {
 
     return (
-        <div className='background_component'>
-
-        </div>
+        <div class="interactive-gradient"></div>
     );
 }
 

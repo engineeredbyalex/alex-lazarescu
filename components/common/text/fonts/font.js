@@ -1,8 +1,8 @@
-import { Poppins } from "@next/font/google"
+import { REM } from "@next/font/google"
 
-export const poppins = Poppins({
-    weight: ['400', '700', '100', '200', '300', '500'],
-    style: ['normal', 'italic'],
+export const rem = REM({
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900',],
+    style: ['normal', 'italic',],
     subsets: ['latin'],
     display: 'swap',
 })
