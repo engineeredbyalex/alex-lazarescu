@@ -19,7 +19,7 @@ h5{
  @apply text-[20px] md:text-[25px] lg:text-[30px] leading-[3rem]  md:leading-[2rem] lg:leading-[2rem]  xl:leading-[4rem]
 }
 p{
- @apply text-[16px] md:text-[18px] lg:text-[20px] leading-[2rem]  md:leading-[2rem] lg:leading-[3rem]  xl:leading-[4rem]
+ @apply text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5rem]  md:leading-[11.75rem] lg:leading-[2rem]  xl:leading-[4rem]
 }
 .main_text{
     color: #fff;
@@ -30,11 +30,11 @@ p{
     font-weight:200;
 }
 .main_text_dark{
-    color: #252525;
+    color: #1A1A1A;
     font-weight:500;
 }
 .sec_text_dark{
-    color: #252525;
+    color: #1A1A1A;
     font-weight:200;
 }
 
