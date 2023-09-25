@@ -28,7 +28,6 @@ function Hero_Component() {
                 </h5>
             </div>
             <div className='image_container'>
-
             </div>
             <div className='text-right'>
                 <h1 className='main_text animate_right' >

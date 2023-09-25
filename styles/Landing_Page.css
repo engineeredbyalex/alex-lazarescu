@@ -20,9 +20,9 @@
 }
 .image_container{
     position: absolute;
-    width: 50vw;
-    left: 25%;
-    height: 40vh;
+    width: 300px;
+  left: 12%;
+    height: 300px;
     bottom:-110%;
     border-radius: 5rem;
     background-image:url('https://i.pinimg.com/564x/c4/6a/bb/c46abb1d7651cc2d244cdc67cd48db33.jpg');

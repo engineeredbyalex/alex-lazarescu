@@ -7,16 +7,16 @@ h1{
 @apply text-[60px] md:text-[110px]  lg:text-[130px] xl:text-[180px]
 }
 h2{
- @apply text-[50px] md:text-[65px] lg:text-[70px]
+ @apply text-[50px] md:text-[65px] lg:text-[70px] 
 }
 h3{
- @apply text-[40px] md:text-[45px] lg:text-[50px] leading-[3rem]  md:leading-[3rem] lg:leading-[3rem]  xl:leading-[rem]
+ @apply text-[40px] md:text-[45px] lg:text-[50px] leading-[3rem]  md:leading-[3rem]
 }
 h4{
  @apply text-[30px] md:text-[35px] lg:text-[40px] md:text-[45px] lg:text-[50px] leading-[3rem]  md:leading-[3rem] lg:leading-[3.5rem]  xl:leading-[4rem]
 }
 h5{
- @apply text-[20px] md:text-[25px] lg:text-[30px] leading-[3rem]  md:leading-[2rem] lg:leading-[2rem]  xl:leading-[4rem]
+ @apply text-[20px] md:text-[25px] lg:text-[30px] leading-[1.5rem]  md:leading-[2rem] lg:leading-[2rem]  xl:leading-[4rem]
 }
 p{
  @apply text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5rem]  md:leading-[11.75rem] lg:leading-[2rem]  xl:leading-[4rem]
@@ -48,8 +48,8 @@ body {
 .page{
     display: flex;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
 
 }
 .center {
@@ -65,9 +65,9 @@ body {
 }
 }
 .container {
-    width: 90vw;
+    width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
     position: absolute;
     z-index: 100;
 }
@@ -106,7 +106,7 @@ body {
 
 }
 .button_main {
-    background-color:#252525 ;
+    background-color:#1A1A1A ;
     text-transform: uppercase;
     font-size: 30px;
     font-weight: 400;
@@ -122,11 +122,9 @@ body {
     padding: 0px 40px;
     border: 0.1rem solid #fff;
 }
-
-.interactive-gradient {
-  position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+.service_box{
+    border: 0.12rem solid #1A1A1A ;
+    border-radius: 2rem;
+    padding: 15px;
+    margin-top: 25px;
 }
