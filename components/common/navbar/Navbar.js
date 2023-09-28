@@ -18,7 +18,7 @@ export default function NavBar() {
             gsap.to(".navigation_bar", { background: "#000", ease: Expo.easeInOut, duration: 1 });
             gsap.to(".naviagtion_menu_line", { background: "#FF9B16", ease: Expo.easeInOut, duration: 1, delay: 2 });
         } else {
-            gsap.to(navigationBarMenu, { left: "-10rem", ease: Expo.easeInOut, duration: 1, });
+            gsap.to(navigationBarMenu, { left: "-15rem", ease: Expo.easeInOut, duration: 1, });
             gsap.to(".navigation_bar", { height: "100px", ease: Expo.easeInOut, duration: 1, delay: 2 });
             gsap.to(".navigation_bar", { background: "transparent", ease: Expo.easeInOut, duration: 1, delay: 2 });
             gsap.to(".naviagtion_menu_line", { background: "#fff", ease: Expo.easeInOut, duration: 1 });
