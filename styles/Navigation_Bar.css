@@ -14,14 +14,13 @@
   position: absolute;
   left: 30px;
   top: 0;
-  color: #fff;
   font-weight: 200;
 }
 .navigation_bar_container{
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 100px;
+  height: 60px;
 }
 .navigation_menu_container{
   display: flex;
@@ -45,7 +44,6 @@
 .naviagtion_menu_line{
   width: 40px;
   height: 4px;
-  background-color: #574E4B;
 }
 .navigation_bar_menu{
   position: absolute;
@@ -55,7 +53,7 @@
   list-style: none;
 }
 .navigation_bar_list_link{
-  color: #fff;
+  color: #DBDBDB;
   text-transform: uppercase;
   font-weight: 200;
 }

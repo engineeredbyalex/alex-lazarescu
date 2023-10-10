@@ -1,20 +1,27 @@
-import React from 'react'
-import Image from 'next/image'
-import Outline_Button from '../buttons/Outline_Button'
 
-function Project_Box(props) {
-    const { title, description, imageUrl, buttonText } = props;
+import { RevealWrapper } from 'next-reveal';
+import Image from 'next/image';
+import { FullBackgroundButton } from '../buttons/buttons';
+import Link from 'next/link';
+
+function ProjectBox({ imageSrc, projectName, projectDescription, techStack, projectLink }) {
+
 
     return (
-        <div className='project_box'>
-            <Image height={1000} width={1000} src={imageUrl} />
-            <div className='project_box_content'>
-                <h5 className='main_text'>{title}</h5>
-                <p className='main_text'>{description}</p>
-                <Outline_Button content={buttonText} />
+        <div className="overflow-hidden text-left">
+            <div className='max-w-[500px] max-h-[500px]'>
+                <Image src={imageSrc}></Image>
             </div>
+            <h3 className='text-[30px] leading-[40px]'>{projectName}</h3>
+            <h4 className='text-[20px] leading-[20px]'>{projectDescription}</h4>
+            <h5 className='text-[16px] leading-[30px]'>{techStack}</h5>
+            <Link href={projectLink}>
+                <h5 className='text-[16px] leading-[30px]'>
+                    Vezi proiect
+                </h5>
+            </Link>
         </div>
-    )
+    );
 }
 
-export default Project_Box
+export default ProjectBox;

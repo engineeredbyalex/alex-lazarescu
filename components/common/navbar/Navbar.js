@@ -10,18 +10,17 @@ export default function NavBar() {
     const [isToggled, setIsToggled] = useState()
     useEffect(() => {
         const navigationBarMenu = document.querySelector(".navigation_bar_menu");
-        const naviagtionMenu = document.querySelector(".naviagtion_menu");
 
         if (isToggled) {
             gsap.to(navigationBarMenu, { left: "0rem", ease: Expo.easeInOut, duration: 1, delay: 2 });
             gsap.to(".navigation_bar", { height: "100vh", ease: Expo.easeInOut, duration: 1 });
-            gsap.to(".navigation_bar", { background: "#000", ease: Expo.easeInOut, duration: 1 });
-            gsap.to(".naviagtion_menu_line", { background: "#FF9B16", ease: Expo.easeInOut, duration: 1, delay: 2 });
+            gsap.to(".navigation_bar", { background: "#3F3F3F", ease: Expo.easeInOut, duration: 1 });
+            gsap.to(".naviagtion_menu_line", { background: "#DBDBDB", ease: Expo.easeInOut, duration: 1, delay: 2 });
         } else {
             gsap.to(navigationBarMenu, { left: "-15rem", ease: Expo.easeInOut, duration: 1, });
-            gsap.to(".navigation_bar", { height: "100px", ease: Expo.easeInOut, duration: 1, delay: 2 });
-            gsap.to(".navigation_bar", { background: "transparent", ease: Expo.easeInOut, duration: 1, delay: 2 });
-            gsap.to(".naviagtion_menu_line", { background: "#fff", ease: Expo.easeInOut, duration: 1 });
+            gsap.to(".navigation_bar", { height: "60px", ease: Expo.easeInOut, duration: 1, delay: 2 });
+            gsap.to(".navigation_bar", { background: "#737373", ease: Expo.easeInOut, duration: 1, delay: 2 });
+            gsap.to(".naviagtion_menu_line", { background: "#DBDBDB", ease: Expo.easeInOut, duration: 1 });
         }
     }, [isToggled]);
 

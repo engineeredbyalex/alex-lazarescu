@@ -2,47 +2,76 @@
 import React, { useEffect } from 'react';
 // importing image
 import Image from 'next/image';
-import Hero_Image from '@/assets/c46abb1d7651cc2d244cdc67cd48db33.jpg';
+import Hero_Image from '@/assets/headshot.jpeg';
 // importing gsap
 import { gsap } from 'gsap';
 import { Expo } from 'gsap';
-// importing icons
-import Outline_Button from '../common/buttons/Outline_Button';
 // 
-import Page from '../common/layout/Page';
+import { RevealWrapper } from 'next-reveal';
+import { FullBackgroundButton } from '../common/buttons/buttons';
+import { OutlineToFillButton } from '../common/buttons/buttons';
+import Wrapper from '../common/layout/Wrapper';
+// 
+import ConnecTM from "@/assets/projects/connectm.png"
+import Openweather from "@/assets/projects/openweather.png"
+import WikiSearch from "@/assets/projects/wikiSearch.png"
+import ProjectBox from '@/components/common/box/Project_Box';
+
 
 
 
 function Hero_Component() {
+    const projectsData = [
+        {
+            imageSrc: ConnecTM,
+            projectName: 'MAYBEE',
+            projectDescription: 'Magazin online',
+            techStack: 'Next.JS 13, MongoDB',
+            projectLink: 'Next.JS 13, MongoDB',
+        },
+        {
+            imageSrc: Openweather,
+            projectName: 'Numele Proiectului 2',
+            projectDescription: 'Descrierea scurtă a proiectului 2.',
+            techStack: 'Tech Stack 2',
+            projectLink: 'Tech Stack 2',
+        },
+        {
+            imageSrc: WikiSearch,
+            projectName: 'Wiki Search',
+            projectDescription: 'Descrierea scurtă a proiectului 3.',
+            techStack: 'Tech Stack 3',
+            projectLink: 'Tech Stack 3',
+        },
+    ];
 
-
-    useEffect(() => {
-        gsap.to(".animate_right", { right: '30px', duration: 2, delay: 2, ease: Expo.easeInOut })
-        gsap.to(".hero_image", { bottom: '-9rem', duration: 2, delay: 2.5, ease: Expo.easeInOut })
-        gsap.to(".animate_left", { left: '30px', duration: 2, delay: 3, ease: Expo.easeInOut })
-        gsap.to(".button_animate_right", { right: '30px', duration: 2, delay: 3.5, ease: Expo.easeInOut })
-    })
 
     return (
-        <Page background='#1A1A1A'>
-            <div className='text-left'>
-                <h5 className='sec_text animate_left'>
-                    Dezvoltator Web <br /> Artist 3D <br /> Student
-                </h5>
-            </div>
-            <div className='image_container'>
-                <Image className='hero_image' height="400" src={Hero_Image}></Image>
-
-            </div>
-            <div className='text-right'>
-                <h1 className='main_text animate_right' >
-                    Lăzărescu <br /> Alexandru
-                </h1>
-            </div>
-            <div className='button_animate_right'>
-                <Outline_Button content="proiecte" />
-            </div>
-        </Page>
+        <div className='min-h-screen w-screen bg-[#DBDBDB] overflow-hidden flex items-center justify-center flex-col'>
+            <div className='max-w-[1024px] flex flex-col '>
+                <div className='w-full h-full flex items-end justify-start gap-[20px] flex-col lg:flex-row mt-[10rem] lg:mt-[5rem]'>
+                    <Image width={200} height={200} src={Hero_Image}></Image>
+                    <div className='flex gap-[5px] flex-col'>
+                        <h4 className='text-[#3f3f3f] font-bold uppercase'>Lăzărescu Alexandru</h4>
+                        <p className='text-[#3f3f3f] font-bold uppercase'>Web Developer și Designer UI/UX</p>
+                    </div>
+                </div>
+                <div className="h-full w-full flex items-center justify-center lg:items-start lg:justify-start flex-col mt-[10rem]">
+                    <RevealWrapper origin="bottom" duration={500} delay={500} reset={false}>
+                        <h4 className=" text-[30px]  uppercase text-[#3F3F3F] mb-8">
+                            Proiectele mele
+                        </h4>
+                    </RevealWrapper>
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-2">
+                        {projectsData.map((project, index) => (
+                            <RevealWrapper key={index} origin="bottom" duration={500} delay={1000 + index * 500} reset={false}>
+                                <ProjectBox {...project} />
+                            </RevealWrapper>
+                        ))}
+                    </div>
+                </div>
+            </div >
+        </div>
     );
 }
 
