@@ -1,9 +1,8 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import { kanit } from '../components/common/text/fonts/font'
 
 export default function Document() {
   return (
-    <Html lang="en" className={kanit.className}>
+    <Html lang="en">
       <Head />
       <body>
         <Main />

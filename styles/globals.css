@@ -2,91 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--kanit);
-}
-
-body {
-  font-family: var(--open-sans);
-}
-
   h1 {
-    @apply text-[50px] leading-[40px] lg:text-[90px] lg:leading-[80px];
-  }
-  
-  h2 {
-    @apply text-[35px] leading-[25px] lg:text-[80px] lg:leading-[70px];
-  }
-  
-  h3 {
-    @apply text-[30px] leading-[20px] lg:text-[70px] lg:leading-[60px];
-  }
-  
-  h4 {
-    @apply text-[30px] leading-[30px] lg:text-[60px] lg:leading-[50px];
-  }
-  
-  h5 {
-    @apply text-[16px] leading-[20px] lg:text-[25px] lg:leading-[25px];
-  }
-  
-  h6 {
-    @apply text-[14px] leading-[20px];
-  }
-  
-  p {
-    @apply text-[20px] leading-[20px];
+    @apply text-[100px] md:text-[125px] lg:text-[150px] 
   }
 
+    h2 {
+    @apply text-[80px] md:text-[110px] lg:text-[130px] 
+  }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-size: 65.7%;
-    overflow-x: hidden;
-}
+      h3 {
+    @apply text-[60px] md:text-[80px] lg:text-[110px] 
+  }
 
-@media screen and (max-widht:768px) {
-    .center {
-    margin-left: 50px;
-    margin-right: 50px;
-}
-}
-.container {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: absolute;
-    z-index: 100;
-}
-.blocks {
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-}
+      h4 {
+    @apply text-[40px] md:text-[60px] lg:text-[90px] 
+  }
+      p {
+    @apply text-[30px] md:text-[30px] lg:text-[50px] 
+  }
+.navigation_bar{
+height:auto;
+background-color: #A1A1A1;
+position: absolute;
+top: 0rem;
+left: 0rem;
+bottom: 0rem;
+right: 0rem;
 
-.block {
-    position: fixed;
-    width: 50%;
-    height: 100vh;
-    z-index: 0;
-    background-color: black;
-}
-.block-left {
-    left: 0%;
-    
-}
-.block-right {
-    right: 0%;
-    
-}
-.button {
-  display: flex;
-  align-items: center;
-  height: 3rem;
-  max-width:15rem;
-  @apply rounded-3xl
-}
-.button_main{
-  @apply bg-[#737373] text-[#DBDBDB]
 }
