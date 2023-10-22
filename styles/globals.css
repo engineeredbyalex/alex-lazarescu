@@ -18,7 +18,7 @@
     @apply text-[40px] md:text-[60px] lg:text-[90px] 
   }
       p {
-    @apply text-[30px] md:text-[30px] lg:text-[50px] 
+    @apply text-[20px] md:text-[30px] lg:text-[50px] 
   }
 .navigation_bar{
 height:auto;
