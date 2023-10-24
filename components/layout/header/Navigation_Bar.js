@@ -11,9 +11,9 @@ export default function Navigation_Bar() {
 
     const animateNavigation = (height, backgroundColor, color, width) => {
         gsap.to(".navigation_bar", { height, backgroundColor, duration: 1, delay: 0.5 });
-        gsap.to(".logo", { color, duration: 0.5, delay: 0.2 });
-        gsap.to(".menu_icon", { backgroundColor: color, duration: 0.5, delay: 0.2 });
-        gsap.to(".menu_icon_line", { width, duration: 0.5, delay: 0.2 });
+        gsap.to(".logo", { color, duration: 0.5, delay: 1 });
+        gsap.to(".menu_icon", { backgroundColor: color, duration: 0.5, delay: 1 });
+        gsap.to(".menu_icon_line", { width, duration: 0.5, delay: 1 });
     };
 
     useEffect(() => {
@@ -30,7 +30,7 @@ export default function Navigation_Bar() {
                 <Wrapper>
                     <Center>
                         <div className='z-[2]'>
-                            <p className='logo font-bold italic uppercase leading-[2rem] lg:leading-[3rem] text-[#000]'>Alexandru <br /> Lăzărescu</p>
+                            <p className='logo font-bold italic uppercase leading-[1.5rem] md:leading-[2rem] lg:leading-[3rem] text-[#000]'>Alexandru <br /> Lăzărescu</p>
                         </div>
                         <div className='cursor-pointer z-[2]' onClick={() => setToggle(!toggle)}>
                             <Menu_Icon />
@@ -45,16 +45,16 @@ export default function Navigation_Bar() {
                             <Link href={"/"}>
                                 <p className='hover:bg-[#f5eb86] hover:py-7 w-[100vw] py-5 transition-all ease-in-out duration-500'>Acasă</p>
                             </Link>
-                            <Link href={"/"}>
+                            <Link href={"/projects"}>
                                 <p className='hover:bg-[#f5eb86] hover:py-7 w-[100vw] py-5 transition-all ease-in-out duration-500'>Proiecte</p>
                             </Link>
-                            <Link href={"/"}>
+                            <Link href={"/about"}>
                                 <p className='hover:bg-[#f5eb86] hover:py-7 w-[100vw] py-5 transition-all ease-in-out duration-500'>Despre mine</p>
                             </Link>
-                            <Link href={"/"}>
+                            <Link href={"/contact"}>
                                 <p className='hover:bg-[#f5eb86] hover:py-7 w-[100vw] py-5 transition-all ease-in-out duration-500'>Contact</p>
                             </Link>
-                            <Link href={"/"}>
+                            <Link href={"/blog"}>
                                 <p className='hover:bg-[#f5eb86] hover:py-7 w-[100vw] py-5 transition-all ease-in-out duration-500'>Blog</p>
                             </Link>
                         </div>

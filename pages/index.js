@@ -7,22 +7,21 @@ import Button from "@/components/common/buttons/Button";
 
 import { Model } from "@/components/Iphone";
 
-
 export default function Home() {
   return (
     <div className="overflow-x-hidden relative">
       <Navigation_Bar />
       <Page>
-        <div>
-          <div className="absolute right-[-20%] top-0 h-screen w-screen flex items-center justify-center">
+        <div className="flex flex-col items-center lg:flex-row lg:items-start lg:justify-between lg:pl-16">
+          <div className="w-full  absolute right-[-30%] top-0 lg:mt-20">
             <RevealWrapper>
-              <div className=" h-screen w-screen  text-white z-[0]">
+              <div className="w-full h-screen text-white">
                 <Canvas>
                   <Stage environment="studio">
                     <OrbitControls autoRotate enableZoom={false} />
-                    <ambientLight intensity={0.1} />
+                    <ambientLight intensity={0.5} />
                     <directionalLight position={[1, 1, 1]} intensity={0.1} />
-                    <mesh>
+                    <mesh scale={5}>
                       <Model />
                     </mesh>
                   </Stage>
@@ -30,24 +29,25 @@ export default function Home() {
               </div>
             </RevealWrapper>
           </div>
-          <RevealWrapper>
-            <h2 className="text-[#fff] font-light uppercase">Salut !</h2>
-          </RevealWrapper>
-          <RevealWrapper>
-            <h4 className="text-[#fff] font-light uppercase">Eu sunt <span className="text-[#F4E869] font-bold">Alex</span></h4>
-          </RevealWrapper>
-          <div className="flex flex-col lg:flex-row gap-[20px] lg:gap-[30px] ">
-            <p className="text-[#F4E869] font-bold uppercase z-[1] text-[20px]">Student</p>
-            <p className="text-[#F4E869] font-bold uppercase z-[1] text-[20px]">Web Developer</p>
-            <p className="text-[#F4E869] font-bold uppercase z-[1] text-[20px]">Designer</p>
-          </div>
-          <div className="flex absolute bottom-[25%] lg:bottom-[20%] gap-[30px]">
-            <Button link="/projects" text="Proiecte" type="solid" color="#F4E869" />
-            <Button link="/contact" text="Contact" type="outline" color="#F4E869" />
+          <div className="text-left  lg:mt-20">
+            <RevealWrapper>
+              <h2 className="text-white font-light uppercase lg:text-7xl lg:leading-96">Salut !</h2>
+            </RevealWrapper>
+            <RevealWrapper>
+              <h4 className="text-white font-light uppercase lg:text-7xl lg:leading-96">Eu sunt <span className="text-[#F4E869] font-bold">Alex</span></h4>
+            </RevealWrapper>
+            <div className="flex flex-col  gap-5 md:gap-20 lg:gap-[10px] mt-5 ">
+              <p className="text-[#F4E869] font-bold uppercase  lg:text-2xl">Student</p>
+              <p className="text-[#F4E869] font-bold uppercase  lg:text-2xl">Web Developer</p>
+              <p className="text-[#F4E869] font-bold uppercase  lg:text-2xl">Designer</p>
+            </div>
+            <div className="flex mt-10  gap-10">
+              <Button link="/projects" text="Proiecte" type="solid" color="#F4E869" />
+              <Button link="/contact" text="Contact" type="outline" color="#F4E869" />
+            </div>
           </div>
         </div>
-
-      </Page >
-    </div >
-  )
+      </Page>
+    </div>
+  );
 }

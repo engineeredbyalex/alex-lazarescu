@@ -7,8 +7,8 @@ export function Model(props) {
   const { nodes, materials } = useGLTF('/iphone.gltf')
   return (
     <group {...props} dispose={null}>
-      <group scale={0.03}>
-        <group scale={20}>
+      <group scale={0.5}>
+        <group scale={1}>
           <mesh geometry={nodes.Frame_Frame_0.geometry} material={materials.Frame} />
           <mesh geometry={nodes.Frame_Frame2_0.geometry} material={materials.Frame2} />
           <mesh geometry={nodes.Frame_Port_0.geometry} material={materials.Port} />

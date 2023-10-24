@@ -33,7 +33,7 @@ const Button = ({ link, text, type, color }) => {
 
     return (
         <Link href={link}>
-            <p style={getButtonStyle()} className="button px-3 rounded-2xl text-[25px] lg:text-[30px] flex items-center justify-center text-center uppercase font-bold">
+            <p style={getButtonStyle()} className="button px-3 rounded-2xl text-[20px] md:text-[25px] lg:text-[30px] flex items-center justify-center text-center uppercase font-bold">
                 {text}
             </p>
         </Link>
