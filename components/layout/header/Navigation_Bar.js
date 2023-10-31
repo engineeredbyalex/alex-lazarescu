@@ -18,7 +18,7 @@ export default function Navigation_Bar() {
 
     useEffect(() => {
         if (toggle === false) {
-            animateNavigation('15vh', '#000', '#F4E869', '30px');
+            animateNavigation('15vh', 'transparent', '#F4E869', '30px');
         } else if (toggle === true) {
             animateNavigation('100vh', '#F4E869', '#000', '40px');
         }
@@ -28,7 +28,7 @@ export default function Navigation_Bar() {
         <div className='navigation_bar z-[2]'>
             <div className='h-[15vh] w-full flex items-center justify-center absolute'>
                 <Wrapper>
-                    <Center>
+                    <div className='w-full h-full flex items-center justify-between ml-[30px] mr-[30px]'>
                         <div className='z-[2]'>
                             <p className='logo font-light italic uppercase leading-[1.5rem] md:leading-[2rem] lg:leading-[3rem] text-[#000]'>AL</p>
                         </div>
@@ -36,7 +36,7 @@ export default function Navigation_Bar() {
                             <Menu_Icon />
                             {/* <h5 className="uppercase text-[#F4E869]">Meniu</h5> */}
                         </div>
-                    </Center>
+                    </div>
                 </Wrapper>
             </div>
             {toggle ? (

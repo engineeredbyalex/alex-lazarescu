@@ -5,47 +5,48 @@ import Button from "@/components/common/buttons/Button";
 import Link from "next/link";
 import ServiceBox from "@/components/layout/content/ServiceBox";
 import TestimonailBox from "@/components/layout/content/TestimonailBox";
+import QRCode from "@/public/qr.png"
+import Image from "next/image";
+import Background from "@/components/common/background/Background";
 
 export default function Home() {
   return (
     <div className="overflow-x-hidden relative">
       <Navigation_Bar />
+      <Background>
+      </Background>
       <Page>
         <div className="flex items-center justify-center h-screen flex-col gap-5 text-center">
           <RevealWrapper delay={1000}>
-
-            <h3 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-bold">Alexandru Lăzărescu</h3>
+            <h3 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-bold t">Alexandru Lăzărescu</h3>
           </RevealWrapper>
-          <div className="flex gap-5" >
+          <div className="flex gap-5 flex-col lg:flex-row" >
             <RevealWrapper delay={1300}>
-              <p className="text-[#000] text-[20px] bg-[#F4E869] px-3 uppercase py-1 rounded-full">Web Devloper</p>
+              <p className="text-[#000] text-[16px] bg-[#F4E869] px-3 uppercase py-1 rounded-full lg:text-[20px]">Web Devloper</p>
 
             </RevealWrapper>
             <RevealWrapper delay={1600}>
-              <p className="text-[#000] text-[20px] bg-[#F4E869] px-3 uppercase py-1 rounded-full">Designer</p>
+              <p className="text-[#000] text-[16px] bg-[#F4E869] px-3 uppercase py-1 rounded-full lg:text-[20px]">Designer</p>
 
             </RevealWrapper>
             <RevealWrapper delay={1900}>
 
-              <p className="text-[#000] text-[20px] bg-[#F4E869] px-3 uppercase py-1 rounded-full">Freelancer</p>
+              <p className="text-[#000] text-[16px] bg-[#F4E869] px-3 uppercase py-1 rounded-full lg:text-[20px]">Freelancer</p>
             </RevealWrapper>
           </div>
-          <div className="flex gap-5">
+          <div className="flex gap-5  flex-col lg:flex-row">
             <RevealWrapper delay={2200}>
               <Button link={'/services'} color="#F4E869" text={'Lucrează cu mine'} />
-
             </RevealWrapper>
             <RevealWrapper delay={2500}>
               <Button link={'/projects'} color="#F4E869" text={'Portofoliu'} />
-
             </RevealWrapper>
           </div>
         </div>
       </Page>
       <Page>
-        <div className="flex items-start justify-start h-screen flex-col gap-5 text-center">
+        <div className="flex items-start justify-center h-screen flex-col gap-5 text-center">
           <RevealWrapper delay={1000}>
-
             <h5 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-light ">Servicii</h5>
           </RevealWrapper>
           <div className="flex flex-col lg:flex-row gap-5 ">
@@ -65,7 +66,7 @@ export default function Home() {
         </div>
       </Page>
       <Page>
-        <div className="flex items-start justify-start h-screen flex-col gap-5 text-center">
+        <div className="flex items-start justify-center h-screen flex-col gap-5 text-center">
           <RevealWrapper delay={1000}>
             <h5 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-light ">Recenzii</h5>
           </RevealWrapper>
@@ -78,13 +79,12 @@ export default function Home() {
               <TestimonailBox title="Design" client="Elena Ionescu" testimonial='Serviciile lor de design au adus un plus de valoare brandului nostru. Cu ajutorul lor, am reușit să ne conturăm o identitate vizuală puternică, iar materialele create au avut un impact semnificativ asupra publicului nostru țintă. Recomand cu încredere serviciile lor de design.' />
             </RevealWrapper>
             <RevealWrapper delay={1900}>
-
               <TestimonailBox title="Consultanță" client="Andrei Stanescu" testimonial='Am apelat la serviciile lor de consultanță pentru un proiect complex, iar sfaturile primite au fost extrem de relevante și utile. Comunicarea deschisă și expertiza lor ne-au ghidat în luarea celor mai bune decizii, ceea ce a condus la succesul proiectului nostru. Recomand cu căldură echipa lor de consultanță.' />
             </RevealWrapper>
-
           </div>
         </div>
       </Page>
+
     </div>
   );
 }
