@@ -19,7 +19,7 @@ const Button = ({ link, text, type, color }) => {
             case 'solid':
                 return {
                     border: `2px solid ${color}`,
-                    color: '#cc66ff',
+                    color: '#000',
                     background: color,
                 };
             default:
@@ -33,7 +33,7 @@ const Button = ({ link, text, type, color }) => {
 
     return (
         <Link href={link}>
-            <p style={getButtonStyle()} className="button px-3 py-3 rounded-2xl text-[16px] md:text-[25px] lg:text-[30px] flex items-center justify-center text-center uppercase font-bold">
+            <p style={getButtonStyle()} className="button px-2 py-2 lg:px-3 lg:py-3 rounded-2xl text-[20px] md:text-[25px] lg:text-[30px] flex items-center justify-center text-center uppercase font-bold">
                 {text}
             </p>
         </Link>

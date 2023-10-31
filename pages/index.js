@@ -21,24 +21,24 @@ export default function Home() {
       </Background>
       <Page>
         <div className="flex items-center justify-center h-screen flex-col gap-5 text-center">
-          <div className="absolute right-[28.15%] top-10">
+          {/* <div className="absolute right-0 lg:right-[28.15%] top-10">
             <Image src={Seven} height={300} />
-          </div>
+          </div> */}
           <RevealWrapper delay={1000}>
             <h3 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-bold t">Alexandru Lăzărescu</h3>
           </RevealWrapper>
-          <div className="flex gap-5 flex-col lg:flex-row" >
+          <div className="flex gap-5 flex-row" >
             <RevealWrapper delay={1300}>
-              <p className="text-[#000] text-[16px] bg-[#F4E869] px-4 uppercase py-2 rounded-full lg:text-[20px]">Web Devloper</p>
+              <p className="text-[#000] text-[12px] bg-[#F4E869] px-4 uppercase py-2 rounded-full lg:text-[20px]">Web Devloper</p>
 
             </RevealWrapper>
             <RevealWrapper delay={1600}>
-              <p className="text-[#000] text-[16px] bg-[#F4E869] px-4 uppercase py-2 rounded-full lg:text-[20px]">Designer</p>
+              <p className="text-[#000] text-[12px] bg-[#F4E869] px-4 uppercase py-2 rounded-full lg:text-[20px]">Designer</p>
 
             </RevealWrapper>
             <RevealWrapper delay={1900}>
 
-              <p className="text-[#000] text-[16px] bg-[#F4E869] px-4 uppercase py-2 rounded-full lg:text-[20px]">Freelancer</p>
+              <p className="text-[#000] text-[12px] bg-[#F4E869] px-4 uppercase py-2 rounded-full lg:text-[20px]">Freelancer</p>
             </RevealWrapper>
           </div>
           <div className="flex gap-5  flex-col lg:flex-row">
