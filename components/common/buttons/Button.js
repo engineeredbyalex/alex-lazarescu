@@ -19,7 +19,7 @@ const Button = ({ link, text, type, color }) => {
             case 'solid':
                 return {
                     border: `2px solid ${color}`,
-                    color: '#000',
+                    color: '#cc66ff',
                     background: color,
                 };
             default:

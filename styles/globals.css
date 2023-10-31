@@ -90,11 +90,13 @@ right: 0rem;
     background-color: #ffcc66; /* orange-300 color in Tailwind CSS */
     animation-delay: 2s;
 
+
 }
 
 .circle5 {
     background-color: #cc66ff; /* purple-300 color in Tailwind CSS */
     animation-delay: 2.5s;
+
  
 }
 

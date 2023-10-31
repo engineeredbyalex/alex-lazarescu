@@ -30,7 +30,7 @@ export default function Navigation_Bar() {
                 <Wrapper>
                     <div className='w-full h-full flex items-center justify-between ml-[30px] mr-[30px]'>
                         <div className='z-[2]'>
-                            <p className='logo font-light italic uppercase leading-[1.5rem] md:leading-[2rem] lg:leading-[3rem] text-[#000]'>AL</p>
+                            <p className='logo font-light italic uppercase leading-[1.5rem] md:leading-[2rem] lg:leading-[3rem] text-[#000] text-[40px]'>AL</p>
                         </div>
                         <div className='cursor-pointer z-[2]' onClick={() => setToggle(!toggle)}>
                             <Menu_Icon />

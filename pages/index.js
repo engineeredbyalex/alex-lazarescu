@@ -8,6 +8,7 @@ import TestimonailBox from "@/components/layout/content/TestimonailBox";
 import QRCode from "@/public/qr.png"
 import Image from "next/image";
 import Background from "@/components/common/background/Background";
+import Footer from "@/components/layout/footer/Footer";
 
 export default function Home() {
   return (
@@ -22,21 +23,21 @@ export default function Home() {
           </RevealWrapper>
           <div className="flex gap-5 flex-col lg:flex-row" >
             <RevealWrapper delay={1300}>
-              <p className="text-[#000] text-[16px] bg-[#F4E869] px-3 uppercase py-1 rounded-full lg:text-[20px]">Web Devloper</p>
+              <p className="text-[#000] text-[16px] bg-[#F4E869] px-4 uppercase py-2 rounded-full lg:text-[20px]">Web Devloper</p>
 
             </RevealWrapper>
             <RevealWrapper delay={1600}>
-              <p className="text-[#000] text-[16px] bg-[#F4E869] px-3 uppercase py-1 rounded-full lg:text-[20px]">Designer</p>
+              <p className="text-[#000] text-[16px] bg-[#F4E869] px-4 uppercase py-2 rounded-full lg:text-[20px]">Designer</p>
 
             </RevealWrapper>
             <RevealWrapper delay={1900}>
 
-              <p className="text-[#000] text-[16px] bg-[#F4E869] px-3 uppercase py-1 rounded-full lg:text-[20px]">Freelancer</p>
+              <p className="text-[#000] text-[16px] bg-[#F4E869] px-4 uppercase py-2 rounded-full lg:text-[20px]">Freelancer</p>
             </RevealWrapper>
           </div>
           <div className="flex gap-5  flex-col lg:flex-row">
             <RevealWrapper delay={2200}>
-              <Button link={'/services'} color="#F4E869" text={'Lucrează cu mine'} />
+              <Button link={'/services'} type="solid" color="#F4E869" text={'Lucrează cu mine'} />
             </RevealWrapper>
             <RevealWrapper delay={2500}>
               <Button link={'/projects'} color="#F4E869" text={'Portofoliu'} />
@@ -67,24 +68,26 @@ export default function Home() {
       </Page>
       <Page>
         <div className="flex items-start justify-center h-screen flex-col gap-5 text-center">
-          <RevealWrapper delay={1000}>
-            <h5 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-light ">Recenzii</h5>
-          </RevealWrapper>
+          <div className="mt-[5rem]">
+            <RevealWrapper delay={1000}>
+              <h5 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-light  ">Recenzii</h5>
+            </RevealWrapper>
+          </div>
           <div className="flex flex-col gap-5 ">
             <RevealWrapper delay={1300}>
-              <TestimonailBox title="Web Development" client="Alexandru Popescu" testimonial='Colaborarea cu echipa a fost excelentă. Serviciile lor de dezvoltare web au depășit cu mult așteptările noastre. Fiecare detaliu a fost luat în considerare, iar rezultatul final a fost un site perfect adaptat nevoilor noastre.' />
+              <TestimonailBox title="Web Development" client="Alexandru Popescu" testimonial='Colaborarea cu Alex a fost excelentă. Serviciile lui de dezvoltare web au depășit cu mult așteptările noastre. Fiecare detaliu a fost luat în considerare, iar rezultatul final a fost un site perfect adaptat nevoilor noastre.' />
             </RevealWrapper>
             <RevealWrapper delay={1600}>
 
-              <TestimonailBox title="Design" client="Elena Ionescu" testimonial='Serviciile lor de design au adus un plus de valoare brandului nostru. Cu ajutorul lor, am reușit să ne conturăm o identitate vizuală puternică, iar materialele create au avut un impact semnificativ asupra publicului nostru țintă. Recomand cu încredere serviciile lor de design.' />
+              <TestimonailBox title="Design" client="Elena Ionescu" testimonial='Serviciile lui de design au adus un plus de valoare brandului nostru. Cu ajutorul lui, am reușit să ne conturăm o identitate vizuală puternică, iar materialele create au avut un impact semnificativ asupra publicului nostru țintă. Recomand cu încredere serviciile lui de design.' />
             </RevealWrapper>
             <RevealWrapper delay={1900}>
-              <TestimonailBox title="Consultanță" client="Andrei Stanescu" testimonial='Am apelat la serviciile lor de consultanță pentru un proiect complex, iar sfaturile primite au fost extrem de relevante și utile. Comunicarea deschisă și expertiza lor ne-au ghidat în luarea celor mai bune decizii, ceea ce a condus la succesul proiectului nostru. Recomand cu căldură echipa lor de consultanță.' />
+              <TestimonailBox title="Consultanță" client="Andrei Stanescu" testimonial='Alex ne-a oferit sfaturi foarte valoaroase pentru a alege platforma perfectă pentru afacera noastră, rezultând reducerea de costuri în mod semnificativ. ' />
             </RevealWrapper>
           </div>
         </div>
       </Page>
-
+      <Footer />
     </div>
   );
 }
