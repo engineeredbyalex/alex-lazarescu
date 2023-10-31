@@ -27,27 +27,25 @@
 height:auto;
 background-color: #A1A1A1;
 position: absolute;
-top: 0rem;
-left: 0rem;
-bottom: 0rem;
-right: 0rem;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+z-index: 3;
 
 }
-.logo {
-   
-}
-
-.menu_icon {
-    
-}
-
-.menu_icon_line {
-   
+.navigation_bar_link {
+    position: relative;
+    left: -1000px;
 }
 
 .background-container {
     width: 100vw;
     height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     position: absolute;
     display: flex;
     align-items: center;

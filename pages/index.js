@@ -17,13 +17,10 @@ export default function Home() {
     <div className="overflow-x-hidden relative">
       <LoadingScreen />
       <Navigation_Bar />
-      <Background>
-      </Background>
+      <Background />
+
       <Page>
         <div className="flex items-center justify-center h-screen flex-col gap-5 text-center">
-          {/* <div className="absolute right-0 lg:right-[28.15%] top-10">
-            <Image src={Seven} height={300} />
-          </div> */}
           <RevealWrapper delay={1000}>
             <h3 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-bold t">Alexandru Lăzărescu</h3>
           </RevealWrapper>

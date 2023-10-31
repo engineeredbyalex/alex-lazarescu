@@ -8,7 +8,7 @@ import { SocialIcon } from 'react-social-icons'
 
 function Footer() {
     return (
-        <div className='h-auto lg:h-[50vh] w-screen bg-[#F4E869] py-[10rem]'>
+        <div className='h-auto  w-screen bg-[#F4E869] py-[10rem]'>
             <div className='lg:ml-[30px] lg:mr-[30px]'>
                 <div className='w-full flex items-center justify-center flex-col lg:flex-row text-center'>
                     <div className='w-full flex items-center justify-center flex-col text-center'>
