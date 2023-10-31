@@ -1,4 +1,4 @@
-import Navigation_Bar from "@/components/layout/header/Navigation_Bar";
+import Navigation_Bar from "@/components/common/header/Navigation_Bar";
 import Page from "@/components/layout/page/Page";
 import { RevealWrapper } from "next-reveal";
 import Button from "@/components/common/buttons/Button";
@@ -8,16 +8,22 @@ import TestimonailBox from "@/components/layout/content/TestimonailBox";
 import QRCode from "@/public/qr.png"
 import Image from "next/image";
 import Background from "@/components/common/background/Background";
-import Footer from "@/components/layout/footer/Footer";
+import Footer from "@/components/common/footer/Footer";
+import Seven from "@/public/77.gif"
+import LoadingScreen from "@/components/common/loader/Loader";
 
 export default function Home() {
   return (
     <div className="overflow-x-hidden relative">
+      <LoadingScreen />
       <Navigation_Bar />
       <Background>
       </Background>
       <Page>
         <div className="flex items-center justify-center h-screen flex-col gap-5 text-center">
+          <div className="absolute right-[28.15%] top-10">
+            <Image src={Seven} height={300} />
+          </div>
           <RevealWrapper delay={1000}>
             <h3 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-bold t">Alexandru Lăzărescu</h3>
           </RevealWrapper>

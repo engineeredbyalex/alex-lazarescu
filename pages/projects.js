@@ -1,6 +1,6 @@
 import ProjectBox from '@/components/layout/content/ProjectBox';
 import Wrapper from '@/components/layout/content/Wrapper';
-import Navigation_Bar from '@/components/layout/header/Navigation_Bar';
+import Navigation_Bar from '@/components/common/header/Navigation_Bar';
 import Page from '@/components/layout/page/Page';
 import { Center } from '@react-three/drei';
 import { RevealWrapper } from 'next-reveal';

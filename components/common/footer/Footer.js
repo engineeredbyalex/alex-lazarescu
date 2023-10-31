@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Center from '../content/Center'
+import Center from '../../layout/content/Center'
 import QRCode from "@/public/qr.png"
 import Image from 'next/image'
 import Link from 'next/link'
