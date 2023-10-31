@@ -8,18 +8,18 @@ import React from 'react';
 
 const projectsArray = [
     {
-        title: 'test',
-        desc: 'test',
-        link: 'test',
-        image: 'test',
-        tech: 'test',
+        title: 'MAYBEE',
+        desc: 'Online Store',
+        link: 'maybee.ro',
+        image: 'maybee-screen.png',
+        tech: 'NextJS 13 MongoDB Axios ',
     },
     {
-        title: 'test',
-        desc: 'test',
-        link: 'test',
-        image: 'test',
-        tech: 'test',
+        title: 'Open Weather',
+        desc: 'Weather App',
+        link: 'https://open-weather-henna.vercel.app/',
+        image: 'open-weather-screen.png',
+        tech: 'JavaScript OpenWeather Api',
     },
     {
         title: 'test',
@@ -44,10 +44,10 @@ function Projects() {
             <Page>
                 <div className='w-full flex items-center justify-center'>
                     <div className='w-full min-h-screen  gap-[20px] flex-col flex items-center justify-between mt-[5rem]'>
-                        {projectsArray.map((project) => (
-                            <RevealWrapper>
-                                <div className='mt-[5rem]' key={project}>
-                                    <ProjectBox title={project.title} desc={project.desc} link={project.link} image={project.image} tech={project.tech} />
+                        {projectsArray.map((project, index) => (
+                            <RevealWrapper key={index}>
+                                <div className='mt-[5rem]'>
+                                    <ProjectBox title={project.title} desc={project.desc} link={project.link} image={`/` + project.image} tech={project.tech} />
                                 </div>
                             </RevealWrapper>
                         ))}

@@ -6,9 +6,8 @@ import { useGLTF } from '@react-three/drei'
 export function Model(props) {
   const { nodes, materials } = useGLTF('/iphone.gltf')
   return (
-    <group {...props} dispose={null}>
-      <group scale={0.5}>
-        <group scale={1}>
+    <group scale={0.05} {...props} dispose={null}>
+        <group>
           <mesh geometry={nodes.Frame_Frame_0.geometry} material={materials.Frame} />
           <mesh geometry={nodes.Frame_Frame2_0.geometry} material={materials.Frame2} />
           <mesh geometry={nodes.Frame_Port_0.geometry} material={materials.Port} />
@@ -17,11 +16,7 @@ export function Model(props) {
           <mesh geometry={nodes.Body_Mic_0.geometry} material={materials.material} />
           <mesh geometry={nodes.Body_Bezel_0.geometry} material={materials.Bezel} />
           <mesh geometry={nodes.Body_Body_0.geometry} material={materials.Body} />
-          <mesh
-  geometry={nodes.Body_Wallpaper_0.geometry}
-  scale={[-1, -1, 1]}
-  material={materials.Wallpaper}
-/>
+          <mesh geometry={nodes.Body_Wallpaper_0.geometry} scale={[-1, -1, 1]} material={materials.Wallpaper}/>
           <mesh geometry={nodes.Body_Camera_Glass_0.geometry} material={materials.Camera_Glass} />
           <mesh geometry={nodes.Body_Lens_0.geometry} material={materials.Lens} />
           <mesh geometry={nodes.Body_Material_0.geometry} material={materials.Material} />
@@ -43,7 +38,6 @@ export function Model(props) {
           <mesh geometry={nodes.Camera001_Black_Glass_0.geometry} material={materials.Black_Glass} />
           <mesh geometry={nodes.Camera003_Material002_0.geometry} material={materials['Material.002']} />
         </group>
-      </group>
     </group>
   )
 }

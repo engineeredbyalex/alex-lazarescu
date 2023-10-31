@@ -11,9 +11,9 @@ export default function Navigation_Bar() {
 
     const animateNavigation = (height, backgroundColor, color, width) => {
         gsap.to(".navigation_bar", { height, backgroundColor, duration: 1, delay: 0.5 });
-        gsap.to(".logo", { color, duration: 0.5, delay: 1 });
-        gsap.to(".menu_icon", { backgroundColor: color, duration: 0.5, delay: 1 });
-        gsap.to(".menu_icon_line", { width, duration: 0.5, delay: 1 });
+        gsap.to(".logo", { color, duration: 1, delay: 1 });
+        gsap.to(".menu_icon", { backgroundColor: color, duration: 1, delay: 1 });
+        gsap.to(".menu_icon_line", { width, duration: 1, delay: 1 });
     };
 
     useEffect(() => {
@@ -30,10 +30,11 @@ export default function Navigation_Bar() {
                 <Wrapper>
                     <Center>
                         <div className='z-[2]'>
-                            <p className='logo font-bold italic uppercase leading-[1.5rem] md:leading-[2rem] lg:leading-[3rem] text-[#000]'>Alexandru <br /> Lăzărescu</p>
+                            <p className='logo font-light italic uppercase leading-[1.5rem] md:leading-[2rem] lg:leading-[3rem] text-[#000]'>AL</p>
                         </div>
                         <div className='cursor-pointer z-[2]' onClick={() => setToggle(!toggle)}>
                             <Menu_Icon />
+                            {/* <h5 className="uppercase text-[#F4E869]">Meniu</h5> */}
                         </div>
                     </Center>
                 </Wrapper>
