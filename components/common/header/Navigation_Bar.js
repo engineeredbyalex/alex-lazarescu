@@ -5,7 +5,6 @@ import Wrapper from '@/components/layout/content/Wrapper';
 import Menu_Icon from '@/components/common/icons/Menu_Icon';
 import Link from 'next/link';
 
-
 export default function Navigation_Bar() {
     const [toggle, setToggle] = useState(false);
 
@@ -13,17 +12,17 @@ export default function Navigation_Bar() {
         const tl = gsap.timeline();
 
         if (toggle === false) {
-            tl.to(".navigation_bar_link", { left: '-1000px', duration: 3, ease: 'power3.inOut' })
-                .to(".navigation_bar", { height: '15vh', backgroundColor: 'transparent', duration: 2, delay: -1, ease: 'power3.inOut' })
-                .to(".logo", { color: '#F4E869', duration: 2, delay: -1, ease: 'power3.inOut' })
-                .to(".menu_icon", { backgroundColor: '#F4E869', duration: 2, delay: -1, ease: 'power3.inOut' })
-                .to(".menu_icon_line", { width: '30px', duration: 2, delay: -1, ease: 'power3.inOut' });
+            tl.to(".navigation_bar_link", { left: '-1000px', duration: 1, ease: 'power3.easeInOut' })
+                .to(".navigation_bar", { height: '15vh', backgroundColor: 'transparent', duration: 1, ease: 'power3.easeInOut' }, '-=1')
+                .to(".logo", { color: '#F4E869', duration: 1, ease: 'power3.easeInOut' }, '-=1')
+                .to(".menu_icon", { backgroundColor: '#F4E869', duration: 1, ease: 'power3.easeInOut' }, '-=1')
+                .to(".menu_icon_line", { width: '30px', duration: 1, ease: 'power3.easeInOut' }, '-=1');
         } else if (toggle === true) {
-            tl.to(".navigation_bar_link", { left: '0', duration: 2, ease: 'power3.inOut' })
-                .to(".navigation_bar", { height: '100vh', backgroundColor: '#F4E869', duration: 2, delay: -1, ease: 'power3.inOut' })
-                .to(".logo", { color: '#000', duration: 2, delay: -1, ease: 'power3.inOut' })
-                .to(".menu_icon", { backgroundColor: '#000', duration: 2, delay: -1, ease: 'power3.inOut' })
-                .to(".menu_icon_line", { width: '40px', duration: 2, delay: -1, ease: 'power3.inOut' });
+            tl.to(".navigation_bar", { height: '100vh', backgroundColor: '#F4E869', duration: 1, ease: 'power3.easeInOut' })
+                .to(".navigation_bar_link", { left: '0', duration: 1, ease: 'power3.easeInOut' }, '-=0.5')
+                .to(".logo", { color: '#000', duration: 1, ease: 'power3.easeInOut' }, '-=0.5')
+                .to(".menu_icon", { backgroundColor: '#000', duration: 1, ease: 'power3.easeInOut' }, '-=0.5')
+                .to(".menu_icon_line", { width: '40px', duration: 1, ease: 'power3.easeInOut' }, '-=0.5');
         }
     }, [toggle]);
 

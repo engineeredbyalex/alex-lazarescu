@@ -24,8 +24,6 @@
     @apply text-[20px] md:text-[30px] lg:text-[50px] 
   }
 .navigation_bar{
-height:auto;
-background-color: #A1A1A1;
 position: absolute;
 top: 0;
 left: 0;
@@ -36,7 +34,7 @@ z-index: 3;
 }
 .navigation_bar_link {
     position: relative;
-    left: -1000px;
+    left: -1000px;;
 }
 
 .background-container {
@@ -129,7 +127,7 @@ z-index: 3;
     flex-direction: column;
     justify-content: center;
     background-color: #000;
-    z-index: 3;
+    z-index: 5;
 }
 
 .barcode {
@@ -154,7 +152,7 @@ z-index: 3;
 .line {
     height: 100px;
     margin: 0 2px;
-    animation: flashAnimation 1s infinite;
+  
 }
 
 .short {
