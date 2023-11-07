@@ -13,13 +13,14 @@ export default function Navigation_Bar() {
 
         if (toggle === false) {
             tl.to(".navigation_bar_link", { left: '-1000px', duration: 1, ease: 'power3.easeInOut' })
-                .to(".navigation_bar", { height: '15vh', backgroundColor: 'transparent', duration: 1, ease: 'power3.easeInOut' }, '-=1')
+                .to(".navigation_bar", { height: '15vh', backgroundColor: 'transparent', duration: 1, delay: 2, ease: 'power3.easeInOut' }, '-=1')
                 .to(".logo", { color: '#F4E869', duration: 1, ease: 'power3.easeInOut' }, '-=1')
+                .to(".menu_icon", { backgroundColor: '#000', duration: 5, ease: 'power3.easeInOut' }, '-=1')
                 .to(".menu_icon", { backgroundColor: '#F4E869', duration: 1, ease: 'power3.easeInOut' }, '-=1')
                 .to(".menu_icon_line", { width: '30px', duration: 1, ease: 'power3.easeInOut' }, '-=1');
         } else if (toggle === true) {
             tl.to(".navigation_bar", { height: '100vh', backgroundColor: '#F4E869', duration: 1, ease: 'power3.easeInOut' })
-                .to(".navigation_bar_link", { left: '0', duration: 1, ease: 'power3.easeInOut' }, '-=0.5')
+                .to(".navigation_bar_link", { left: '0', duration: 1, delay: 2, ease: 'power3.easeInOut' }, '-=0.5')
                 .to(".logo", { color: '#000', duration: 1, ease: 'power3.easeInOut' }, '-=0.5')
                 .to(".menu_icon", { backgroundColor: '#000', duration: 1, ease: 'power3.easeInOut' }, '-=0.5')
                 .to(".menu_icon_line", { width: '40px', duration: 1, ease: 'power3.easeInOut' }, '-=0.5');
@@ -32,7 +33,6 @@ export default function Navigation_Bar() {
                 <Wrapper>
                     <div className='w-full h-full flex items-center justify-between ml-[30px] mr-[30px]'>
                         <div className='z-[2]'>
-                            {/* Logo */}
                         </div>
                         <div className='cursor-pointer z-[2]' onClick={() => setToggle(!toggle)}>
                             <Menu_Icon />
@@ -44,20 +44,20 @@ export default function Navigation_Bar() {
                 <div className='flex items-center justify-between'>
                     <div className='text-[#000] font-light uppercase text-center'>
                         <Link href={"/"}>
-                            <p className='navigation_bar_link'>Acasă</p>
+                            <h3 className='navigation_bar_link font-medium'>Acasă</h3>
                         </Link>
                         <Link href={"/projects"}>
-                            <p className='navigation_bar_link'>Proiecte</p>
+                            <h3 className='navigation_bar_link font-medium' >Proiecte</h3>
                         </Link>
                         <Link href={"/about"}>
-                            <p className='navigation_bar_link'>Despre mine</p>
+                            <h3 className='navigation_bar_link font-medium'>Despre mine</h3>
                         </Link>
                         <Link href={"/contact"}>
-                            <p className='navigation_bar_link'>Contact</p>
+                            <h3 className='navigation_bar_link font-medium'>Contact</h3>
                         </Link>
-                        <Link href={"/blog"}>
-                            <p className='navigation_bar_link'>Blog</p>
-                        </Link>
+                        {/* <Link href={"/blog"}>
+                            <h3 className='navigation_bar_link font-medium'>Blog</h3>
+                        </Link> */}
                     </div>
                 </div>
             </div>

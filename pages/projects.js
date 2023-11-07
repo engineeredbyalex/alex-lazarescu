@@ -1,39 +1,27 @@
-import ProjectBox from '@/components/layout/content/ProjectBox';
-import Wrapper from '@/components/layout/content/Wrapper';
-import Navigation_Bar from '@/components/common/header/Navigation_Bar';
-import Page from '@/components/layout/page/Page';
-import { Center } from '@react-three/drei';
-import { RevealWrapper } from 'next-reveal';
+// Projects component
 import React from 'react';
+import ProjectBox from '@/components/layout/content/ProjectBox';
+
+import Page from '@/components/layout/page/Page';
+import { RevealWrapper } from 'next-reveal';
+
+import MaybeeScreen from "@/public/maybee.ro.png";
+import Navigation_Bar from '@/components/common/header/Navigation_Bar';
 
 const projectsArray = [
     {
         title: 'MAYBEE',
-        desc: 'Online Store',
-        link: 'maybee.ro',
-        image: 'maybee-screen.png',
-        tech: 'NextJS 13 MongoDB Axios ',
+        desc: 'Magazin online însoțit de panou pentru administrator.',
+        link: '/',
+        image: MaybeeScreen,
+        tech: 'NextJS 13, MongoDB, Amzon S3',
     },
     {
         title: 'Open Weather',
-        desc: 'Weather App',
-        link: 'https://open-weather-henna.vercel.app/',
-        image: 'open-weather-screen.png',
+        desc: 'Aplicație de vreme construită cu OpenWeather API',
+        link: '/',
+        image: '/open-weather-screen.png', // Make sure the path is correct
         tech: 'JavaScript OpenWeather Api',
-    },
-    {
-        title: 'test',
-        desc: 'test',
-        link: 'test',
-        image: 'test',
-        tech: 'test',
-    },
-    {
-        title: 'test',
-        desc: 'test',
-        link: 'test',
-        image: 'test',
-        tech: 'test',
     },
 ];
 
@@ -47,7 +35,7 @@ function Projects() {
                         {projectsArray.map((project, index) => (
                             <RevealWrapper key={index}>
                                 <div className='mt-[5rem]'>
-                                    <ProjectBox title={project.title} desc={project.desc} link={project.link} image={`/` + project.image} tech={project.tech} />
+                                    <ProjectBox title={project.title} desc={project.desc} link={project.link} image={project.image} tech={project.tech} />
                                 </div>
                             </RevealWrapper>
                         ))}

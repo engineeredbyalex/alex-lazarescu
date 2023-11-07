@@ -33,7 +33,7 @@ const Button = ({ link, text, type, color }) => {
 
     return (
         <Link href={link}>
-            <p style={getButtonStyle()} className="button px-2 py-2 lg:px-3 lg:py-3 rounded-2xl text-[20px] md:text-[25px] lg:text-[30px] flex items-center justify-center text-center uppercase font-bold">
+            <p style={getButtonStyle()} className="button px-2 py-2  rounded-2xl text-[18px] md:text-[20px] lg:text-[25px] flex items-center justify-center text-center uppercase font-bold">
                 {text}
             </p>
         </Link>

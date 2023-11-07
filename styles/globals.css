@@ -3,25 +3,25 @@
 @tailwind utilities;
 
   h1 {
-    @apply text-[100px] md:text-[125px] lg:text-[150px] 
+    @apply text-[100px]  
   }
 
     h2 {
-    @apply text-[80px] md:text-[110px] lg:text-[130px] 
+    @apply text-[62.5px]  
   }
 
       h3 {
-    @apply text-[60px] md:text-[80px] lg:text-[110px] 
+    @apply text-[40px]  
   }
 
       h4 {
-    @apply text-[40px] md:text-[60px] lg:text-[90px] 
+    @apply text-[30px]  
   }
         h5 {
-    @apply text-[30px] md:text-[40px] lg:text-[70px] 
+    @apply text-[20px]  
   }
       p {
-    @apply text-[20px] md:text-[30px] lg:text-[50px] 
+    @apply text-[18px]  
   }
 .navigation_bar{
 position: absolute;

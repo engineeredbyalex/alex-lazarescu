@@ -20,9 +20,9 @@ export default function Home() {
       <Background />
 
       <Page>
-        <div className="flex items-center justify-center h-screen flex-col gap-5 text-center">
+        <div className="flex items-center justify-center w-full h-screen flex-col gap-5 text-center">
           <RevealWrapper delay={1000}>
-            <h3 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-bold t">Alexandru Lăzărescu</h3>
+            <h2 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-bold ">Alexandru Lăzărescu</h2>
           </RevealWrapper>
           <div className="flex gap-5 flex-row" >
             <RevealWrapper delay={1300}>
@@ -34,7 +34,6 @@ export default function Home() {
 
             </RevealWrapper>
             <RevealWrapper delay={1900}>
-
               <p className="text-[#000] text-[12px] bg-[#F4E869] px-4 uppercase py-2 rounded-full lg:text-[20px]">Freelancer</p>
             </RevealWrapper>
           </div>
@@ -51,7 +50,7 @@ export default function Home() {
       <Page>
         <div className="flex items-start justify-center h-screen flex-col gap-5 text-center">
           <RevealWrapper delay={1000}>
-            <h5 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-light ">Servicii</h5>
+            <h3 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-light ">Servicii</h3>
           </RevealWrapper>
           <div className="flex flex-col lg:flex-row gap-5 ">
             <RevealWrapper delay={1300}>
@@ -70,10 +69,10 @@ export default function Home() {
         </div>
       </Page>
       <Page>
-        <div className="flex items-start justify-center h-screen flex-col gap-5 text-center">
+        <div className="flex items-start justify-center h-screen flex-col gap-5 text-center mb-20">
           <div className="mt-[5rem]">
             <RevealWrapper delay={1000}>
-              <h5 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-light  ">Recenzii</h5>
+              <h3 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-light  ">Recenzii</h3>
             </RevealWrapper>
           </div>
           <div className="flex flex-col gap-5 ">
