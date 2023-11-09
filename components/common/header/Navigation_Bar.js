@@ -4,7 +4,8 @@ import { gsap } from 'gsap';
 import Wrapper from '@/components/layout/content/Wrapper';
 import Menu_Icon from '@/components/common/icons/Menu_Icon';
 import Link from 'next/link';
-
+import Logo from "@/public/logo.png"
+import Image from 'next/image';
 export default function Navigation_Bar() {
     const [toggle, setToggle] = useState(false);
 
@@ -33,6 +34,7 @@ export default function Navigation_Bar() {
                 <Wrapper>
                     <div className='w-full h-full flex items-center justify-between ml-[30px] mr-[30px]'>
                         <div className='z-[2]'>
+                            <Image width={150} height={150} src={Logo} alt="Logo" /> {/* Use the Image component correctly */}
                         </div>
                         <div className='cursor-pointer z-[2]' onClick={() => setToggle(!toggle)}>
                             <Menu_Icon />

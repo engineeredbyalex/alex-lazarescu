@@ -2,24 +2,26 @@ import Navigation_Bar from "@/components/common/header/Navigation_Bar";
 import Page from "@/components/layout/page/Page";
 import { RevealWrapper } from "next-reveal";
 import Button from "@/components/common/buttons/Button";
-import Link from "next/link";
 import ServiceBox from "@/components/layout/content/ServiceBox";
 import TestimonailBox from "@/components/layout/content/TestimonailBox";
-import QRCode from "@/public/qr.png"
 import Image from "next/image";
-import Background from "@/components/common/background/Background";
 import Footer from "@/components/common/footer/Footer";
-import Seven from "@/public/77.gif"
 import LoadingScreen from "@/components/common/loader/Loader";
+import Render from "@/public/render.png"
+import AnimatedBackground from "@/public/comp.mp4"
 
 export default function Home() {
   return (
     <div className="overflow-x-hidden relative">
       <LoadingScreen />
       <Navigation_Bar />
-      <Background />
-
+      <div className="video-background">
+        <video autoPlay muted loop id="myVideo">
+          <source src={AnimatedBackground} type="video/mp4" />
+        </video>
+      </div>
       <Page>
+
         <div className="flex items-center justify-center w-full h-screen flex-col gap-5 text-center">
           <RevealWrapper delay={1000}>
             <h2 className="text-[#F4E869] leading-[4rem] lg:leading-[8rem] uppercase font-bold ">Alexandru Lăzărescu</h2>
@@ -45,6 +47,10 @@ export default function Home() {
               <Button link={'/projects'} color="#F4E869" text={'Portofoliu'} />
             </RevealWrapper>
           </div>
+          <div className="absolute left-[20%] top-[5%] rotate-[30deg] z-[1]">
+            <Image width={500} src={Render}></Image>
+          </div>
+
         </div>
       </Page>
       <Page>
@@ -66,6 +72,7 @@ export default function Home() {
               <ServiceBox service="Consultanță" desc='Servicii de consultanță , înainte de a începe un proiect este necesar să discuți cu un specialist.' />
             </RevealWrapper>
           </div>
+
         </div>
       </Page>
       <Page>

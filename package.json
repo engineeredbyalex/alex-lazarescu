@@ -28,5 +28,8 @@
     "scrollreveal": "^4.0.9",
     "tailwindcss": "3.3.2",
     "three": "^0.156.1"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0"
   }
 }
