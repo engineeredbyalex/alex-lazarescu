@@ -47,9 +47,9 @@ export default function Home() {
               <Button link={'/projects'} color="#F4E869" text={'Portofoliu'} />
             </RevealWrapper>
           </div>
-          <div className="absolute left-[20%] top-[5%] rotate-[30deg] z-[1]">
+          {/* <div className="absolute left-[20%] top-[5%] rotate-[30deg] z-[1]">
             <Image width={500} src={Render}></Image>
-          </div>
+          </div> */}
 
         </div>
       </Page>
