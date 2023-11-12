@@ -11,7 +11,7 @@ import Logo from "@/public/logo/small_Logo_alt.png"
 
 function Footer() {
     return (
-        <div className='h-auto w-screen py-[5rem]'>
+        <div className='h-[50vh] w-screen'>
             <div className='w-full flex items-center justify-evenly'>
                 <div className=' flex flex-col gap-5 absolute left-[50px]'>
                     <p className='z-[2]'>Nu ezita să mă contactezi.</p>

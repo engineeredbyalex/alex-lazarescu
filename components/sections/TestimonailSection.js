@@ -7,12 +7,12 @@ import TestimonailBox from '../layout/content/TestimonailBox'
 function TestimonailSection() {
     return (
         <Page>
-            <div className="flex items-start justify-center h-screen flex-col gap-5 text-center mb-20">
+            <div className="flex items-start justify-center h-auto flex-col gap-5 text-center mb-20">
                     <RevealWrapper delay={1000}>
                         <h3 className="text-[#000] leading-[4rem] lg:leading-[8rem] uppercase font-normal  ">Recenzii</h3>
                     </RevealWrapper>
 
-                <div className="flex flex-col  lg:grid grid-cols-2 gap-5 w-full ">
+                <div className="flex flex-col  lg:grid grid-cols-2 gap-5 w-full  h-auto ">
                     <RevealWrapper delay={1300}>
                         <TestimonailBox title="Web Development" client="Alexandru Popescu" testimonial='Colaborarea cu Alex a fost excelentă. Serviciile lui de dezvoltare web au depășit cu mult așteptările noastre. Fiecare detaliu a fost luat în considerare, iar rezultatul final a fost un site perfect adaptat nevoilor noastre.' />
                     </RevealWrapper>

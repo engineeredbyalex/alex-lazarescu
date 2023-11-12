@@ -10,11 +10,7 @@ import AnimatedBackground from "@/public/video/comp2.mp4"
 function LandingPage() {
     return (
         <Page>
-            <div className="video-background">
-                <video autoPlay muted loop id="bg_video">
-                    <source src={AnimatedBackground} type="video/mp4" />
-                </video>
-            </div>
+
             <div className="flex items-start justify-center w-full h-screen flex-col  text-center">
                 <RevealWrapper delay={4000}>
                     <h1 className='z-[2] uppercase  text-[#000] leading-[2.3rem] lg:leading-[2.6rem] font-[600]  px-5 py-5 rounded-2xl text-left'>
@@ -27,10 +23,10 @@ function LandingPage() {
                     </h1>
                 </RevealWrapper>
                 <RevealWrapper delay={4600}>
-                    <h4 className='z-[2] uppercase  text-[#000] leading-[1.3rem] lg:leading-[2rem] font-light   px-5 py-5 rounded-2xl text-left'>
-                        Salut, eu sunt Alex , un dezvoltator web și designer grafic. <br />
-                        Colaborez cu branduri la nivel global pentru a proiecta site-uri web cu impact, <br /> concentrate pe nevoile lor, <br /> care generează rezultate și îndeplinesc obiectivele de afaceri.
-                    </h4>
+                    <h5 className='z-[2] uppercase  text-[#000]  lg:leading-[1.3rem] font-light   px-5 py-5 rounded-2xl text-left w-[70%]'>
+                        Salut, eu sunt Alex , un dezvoltator web și designer grafic.
+                        Colaborez cu branduri la nivel global pentru a proiecta  site-uri web cu impact,  concentrate pe nevoile lor, care generează rezultate și îndeplinesc obiectivele de afaceri.
+                    </h5>
                 </RevealWrapper>
                 <div className='z-[2] flex w-full gap-[10rem] items-center justify-start ml-5'>
                     <RevealWrapper delay={4600}>
