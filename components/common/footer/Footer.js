@@ -1,28 +1,30 @@
-import React from 'react'
-
+// 
 import Center from '../../layout/content/Center'
-import QRCode from "@/public/qr.png"
+// 
 import Image from 'next/image'
-import Link from 'next/link'
+// 
 import { SocialIcon } from 'react-social-icons'
+// 
+import Wrapper from '@/components/layout/content/Wrapper'
+// 
+import Logo from "@/public/logo/small_Logo_alt.png"
 
 function Footer() {
     return (
-        <div className='h-auto w-screen bg-[#F4E869] py-[5rem]'>
-            <div className='lg:ml-[30px] lg:mr-[30px]'>
-                <div className='flex items-center justify-evenly flex-col lg:flex-row text-center gap-5'>
-                    <div className=' flex items-center justify-center flex-col text-center'>
-                        <h4 className="text-[#000] text-[40px] leading-[2.5rem] lg:leading-[4rem] uppercase font-bold">Alexandru Lăzărescu</h4>
+        <div className='h-auto w-screen py-[5rem]'>
+            <div className='w-full flex items-center justify-evenly'>
+                <div className=' flex flex-col gap-5 absolute left-[50px]'>
+                    <p className='z-[2]'>Nu ezita să mă contactezi.</p>
+                    <div className='lex flex-row gap-5 items-center justify-center'>
+                        <SocialIcon className='scale-75' bgColor='black' url='https://github.com/engineeredbyalex' />
+                        <SocialIcon className='scale-75' bgColor='black' url='https://www.linkedin.com/in/alexandru-lazarescu-784031252/' />
+                        <SocialIcon className='scale-75' bgColor='black' url='https://www.instagram.com/nusuntlaza/' />
+                        <SocialIcon className='scale-75' bgColor='black' url='dev.lazarescu.alexandru@gmail.com' />
                     </div>
-                    <div className=' flex flex-row gap-5'>
-                        <SocialIcon bgColor='black' url='https://github.com/engineeredbyalex' />
-                        <SocialIcon bgColor='black' url='https://www.linkedin.com/in/alexandru-lazarescu-784031252/' />
-                        <SocialIcon bgColor='black' url='https://www.instagram.com/nusuntlaza/' />
-                        <SocialIcon bgColor='black' url='dev.lazarescu.alexandru@gmail.com' />
-                    </div>
-                    <div className='w-full flex items-center justify-center flex-col gap-5'>
-                        <Image src={QRCode} width={150} height={150} />
-                    </div>
+
+                </div>
+                <div className='absolute right-[50px]'>
+                    <Image width={150} height={150} className='z-[2]' src={Logo} />
                 </div>
             </div>
         </div>

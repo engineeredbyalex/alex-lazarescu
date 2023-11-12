@@ -1,7 +1,7 @@
 import Navigation_Bar from '@/components/common/header/Navigation_Bar'
 import Page from '@/components/layout/page/Page'
 import React from 'react'
-import QRCode from "@/public/qr.png"
+import QRCode from "@/public/assets/qr.png"
 import Image from 'next/image'
 import { RevealWrapper } from 'next-reveal'
 

@@ -5,7 +5,7 @@ import ProjectBox from '@/components/layout/content/ProjectBox';
 import Page from '@/components/layout/page/Page';
 import { RevealWrapper } from 'next-reveal';
 
-import MaybeeScreen from "@/public/maybee.ro.png";
+import MaybeeScreen from "@/public/assets/maybee.ro.png";
 import Navigation_Bar from '@/components/common/header/Navigation_Bar';
 
 const projectsArray = [

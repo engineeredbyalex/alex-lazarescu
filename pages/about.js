@@ -1,7 +1,7 @@
 import Navigation_Bar from '@/components/common/header/Navigation_Bar'
 import Page from '@/components/layout/page/Page'
 import Image from 'next/image'
-import HeadShot from "@/public/headshot.jpeg"
+import HeadShot from "@/public/assets/headshot.jpeg"
 import { RevealWrapper } from 'next-reveal'
 
 export default function about() {

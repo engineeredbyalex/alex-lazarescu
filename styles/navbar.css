@@ -1,0 +1,46 @@
+.navigation_bar {
+  width: 100vw;
+  height: 15vh;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  visibility: visible;
+}
+.navigation_bar_container {
+  width:1024px;
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 2;
+}
+.navigation_bar_list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  color: #fff;
+}
+.menu_icon_container {
+  width: 40px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.menu_icon {
+  width: 40px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 30px;
+}

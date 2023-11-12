@@ -9,7 +9,7 @@ const LoadingScreen = () => {
         const barcodeText = document.querySelector('.barcode-text');
         const tl = gsap.timeline();
 
-        tl.to(barcode, { scaleY: 0, duration: 4, delay: 2, ease: Expo.easeInOut })
+        tl.to(barcode, { scaleY: 0, duration: 2, delay: 2, ease: Expo.easeInOut })
             .to(barcodeText, { y: -100, duration: 1, ease: Expo.easeInOut }, "-=1")
             .to(loadingScreen, { y: '-100%', duration: 1, ease: Expo.easeInOut }, "-=1")
             .then(() => {
