@@ -5,30 +5,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
   h1 {
-    @apply text-[100px]  
+    @apply lg:text-[100px]   text-[50px]
   }
 
     h2 {
-    @apply text-[62.5px]  
+    @apply lg:text-[62.5px]    text-[30px]
   }
 
       h3 {
-    @apply text-[40px]  
+    @apply lg:text-[40px]    text-[24px]
   }
 
       h4 {
-    @apply text-[30px]  
+    @apply lg:text-[30px]    text-[20px]
   }
         h5 {
-    @apply text-[20px]  
+    @apply lg:text-[20px]  text-[18px]  
   }
       p {
-    @apply text-[18px]  
+    @apply lg:text-[18px]  text-[16px]  
   }
   body {
     font-family: 'Kanit', sans-serif;
   }
-
 .video-background {
   position: fixed;
   right: 0;

@@ -15,32 +15,34 @@ function LandingPage() {
                     <source src={AnimatedBackground} type="video/mp4" />
                 </video>
             </div>
-            <div className="flex items-center justify-center w-full h-screen flex-col gap-5 text-center">
-                <RevealWrapper delay={1000}>
-                    <h1 className="text-[#000] leading-[4rem] lg:leading-[5rem] uppercase font-[800] italic ">
-                        Lăzărescu <br /> Alexandru
+            <div className="flex items-start justify-center w-full h-screen flex-col  text-center">
+                <RevealWrapper delay={4000}>
+                    <h1 className='z-[2] uppercase  text-[#000] leading-[2.3rem] lg:leading-[2.6rem] font-[600]  px-5 py-5 rounded-2xl text-left'>
+                        Dezvoltator Web
                     </h1>
                 </RevealWrapper>
-                <div className="flex gap-5 flex-row" >
-                    <RevealWrapper delay={1300}>
-                        <p className="text-[#fff] text-[12px]  px-4 uppercase py-2 rounded-full lg:text-[20px]">Web Devloper</p>
+                <RevealWrapper delay={4300}>
+                    <h1 className='z-[2] uppercase  text-[#000] leading-[2.3rem] lg:leading-[2.6rem] font-[600]   px-5 py-5 rounded-2xl text-left'>
+                        Desigenr grafic
+                    </h1>
+                </RevealWrapper>
+                <RevealWrapper delay={4600}>
+                    <h4 className='z-[2] uppercase  text-[#000] leading-[1.3rem] lg:leading-[2rem] font-light   px-5 py-5 rounded-2xl text-left'>
+                        Salut, eu sunt Alex , un dezvoltator web și designer grafic. <br />
+                        Colaborez cu branduri la nivel global pentru a proiecta site-uri web cu impact, <br /> concentrate pe nevoile lor, <br /> care generează rezultate și îndeplinesc obiectivele de afaceri.
+                    </h4>
+                </RevealWrapper>
+                <div className='z-[2] flex w-full gap-[10rem] items-center justify-start ml-5'>
+                    <RevealWrapper delay={4600}>
+
+                        <Button className link="/your-link" text="Contact" type="outline" color="#000" />
                     </RevealWrapper>
-                    <RevealWrapper delay={1600}>
-                        <p className="text-[#fff] text-[12px]  px-4 uppercase py-2 rounded-full lg:text-[20px]">Designer</p>
-                    </RevealWrapper>
-                    <RevealWrapper delay={1900}>
-                        <p className="text-[#fff] text-[12px]  px-4 uppercase py-2 rounded-full lg:text-[20px]">Freelancer</p>
+                    <RevealWrapper delay={4900}>
+                        <Button className link="/your-link" text="Proiecte" type="solid" color="#000" />
+
                     </RevealWrapper>
                 </div>
-                <div className="flex gap-5  flex-col lg:flex-row">
-                    <RevealWrapper delay={2200}>
-                        <Button link={'/services'} type="solid" color="#000" text={'Lucrează cu mine'} />
-                        {/* <Button link={'/services'} type="solid" color="#c426e8" text={'Lucrează cu mine'} /> */}
-                    </RevealWrapper>
-                    <RevealWrapper delay={2500}>
-                        <Button link={'/projects'} color="#000" text={'Portofoliu'} />
-                    </RevealWrapper>
-                </div>
+
             </div>
         </Page>
     )

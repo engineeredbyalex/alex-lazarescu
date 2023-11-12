@@ -35,7 +35,7 @@ export default function Navigation_Bar() {
         <div className='navigation_bar'>
             <div className='navigation_bar_container'>
                 <Center>
-                    <Image src={Logo} width={150} height={150}></Image>
+                    <Image src={Logo} width={200} height={200}></Image>
                     <div onClick={() => setToggle(!toggle)}>
                         <Menu_Icon />
                     </div>

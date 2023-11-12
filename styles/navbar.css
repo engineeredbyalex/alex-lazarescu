@@ -11,7 +11,7 @@
   visibility: visible;
 }
 .navigation_bar_container {
-  width:1024px;
+  width:2048px;
   height: 15vh;
   display: flex;
   flex-direction: row;

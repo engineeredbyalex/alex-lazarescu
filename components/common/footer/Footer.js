@@ -24,7 +24,7 @@ function Footer() {
 
                 </div>
                 <div className='absolute right-[50px]'>
-                    <Image width={150} height={150} className='z-[2]' src={Logo} />
+                    <Image width={300} height={300} className='z-[2]' src={Logo} />
                 </div>
             </div>
         </div>

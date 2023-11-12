@@ -7,7 +7,7 @@ const Button = ({ link, text, type, color }) => {
             case 'outline':
                 return {
                     border: `2px solid ${color}`,
-                    color: '#fff',
+                    color: '#000',
                     background: 'none',
                 };
             case 'transparent':
@@ -33,7 +33,7 @@ const Button = ({ link, text, type, color }) => {
 
     return (
         <Link href={link}>
-            <p style={getButtonStyle()} className="button px-2 py-2  rounded-2xl text-[16px] md:text-[18px] lg:text-[20px] flex items-center justify-center text-center uppercase font-normal hover:scale-105 transition-all ease-in-out">
+            <p style={getButtonStyle()} className="button w-[15rem] h-[3rem]   rounded-2xl text-[16px] md:text-[18px] lg:text-[20px] flex items-center justify-center text-center uppercase font-normal hover:scale-105 transition-all ease-in-out">
                 {text}
             </p>
         </Link>

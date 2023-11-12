@@ -1,0 +1,69 @@
+// importing Page
+import Page from '../layout/page/Page'
+// importing Reveal Wrapper
+import { RevealWrapper } from 'next-reveal'
+// 
+import MaybeeScreen from "@/public/assets/maybee.ro.png";
+import WeatherScreen from "@/public/assets/open-weather-screen.png";
+// 
+import Image from 'next/image';
+import Button from '@/components/common/buttons/Button'; // Assuming you have the Button component in a separate file
+
+const projectsArray = [
+    {
+        title: 'MAYBEE',
+        desc: 'Dezvoltare web - design interfață',
+        link: '/',
+        image: MaybeeScreen,
+        tech: 'NextJS 13, MongoDB, Amzon S3',
+    },
+    {
+        title: 'Open Weather',
+        desc: 'Dezvoltare web - design interfață',
+        link: 'maybee.ro',
+        image: WeatherScreen,
+        tech: 'JavaScript OpenWeather Api',
+    },
+];
+
+function SelectedWork() {
+    return (
+        <Page>
+            <RevealWrapper delay={1000}>
+                <RevealWrapper delay={1000}>
+                    <h3 className="text-[#000] leading-[4rem] lg:leading-[8rem] uppercase font-normal  ">Proiecte alese</h3>
+                </RevealWrapper>
+                <div className="flex flex-col lg:grid grid-cols-2  w-full min-h-screen ">
+                    <div className='z-[2] grid grid-cols-2 gap-[16.5rem]'>
+                        {projectsArray.map((project, index) => (
+                            <RevealWrapper key={index} delay={1300 * index}>
+                                <div>
+                                    <div className='w-[30rem] h-[15rem] bg-black relative z-[2]'>
+                                        <Image
+                                            layout="fill"
+                                            objectFit="cover"
+                                            src={project.image}
+                                            alt={project.title}
+                                        />
+
+                                    </div>
+                                    <div className=" flex flex-col justify-center text-left items-start mb-5 ">
+                                        <h4 className='text-[#000] font-[300] '>{project.title}</h4>
+                                        <h5 className='text-[#000] font-[300] leading-4'>{project.desc}</h5>
+
+                                    </div>
+                                    <Button link={project.link} text="Vezi proiectul" type="outline" color="#000" />
+                                </div>
+                            </RevealWrapper>
+
+                        ))}
+
+                    </div>
+                </div>
+            </RevealWrapper>
+        </Page>
+    )
+}
+
+
+export default SelectedWork;
