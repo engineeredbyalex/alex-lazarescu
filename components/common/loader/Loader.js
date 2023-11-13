@@ -9,9 +9,9 @@ const LoadingScreen = () => {
         const barcodeText = document.querySelector('.barcode-text');
         const tl = gsap.timeline();
 
-        tl.to(barcode, { scaleY: 0, duration: 2, delay: 2, ease: Expo.easeInOut })
+        tl.to(barcode, { scaleY: 0, duration: 2.5, delay: 2.5, ease: Expo.easeInOut })
             .to(barcodeText, { y: -100, duration: 1, ease: Expo.easeInOut }, "-=1")
-            .to(loadingScreen, { y: '-100%', duration: 1, ease: Expo.easeInOut }, "-=1")
+            .to(loadingScreen, { y: '-100%', duration: 2.5, ease: Expo.easeInOut }, "-=1")
             .then(() => {
                 loadingScreen.style.zIndex = -1;
             });
@@ -33,21 +33,6 @@ const LoadingScreen = () => {
                 <div className="line short"></div>
                 <div className="line medium"></div>
                 <div className="line long"></div>
-            </div>
-            <div className="barcode-text">
-                <p className="">A</p>
-                <p className="">L</p>
-                <p className="">E</p>
-                <p className="">X</p>
-                <p className="">L</p>
-                <p className="">Ă</p>
-                <p className="">Z</p>
-                <p className="">Ă</p>
-                <p className="">R</p>
-                <p className="">E</p>
-                <p className="">S</p>
-                <p className="">C</p>
-                <p className="">U</p>
             </div>
         </div>
     );

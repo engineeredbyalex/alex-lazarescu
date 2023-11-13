@@ -7,7 +7,7 @@ import MaybeeScreen from "@/public/assets/maybee.ro.png";
 import WeatherScreen from "@/public/assets/open-weather-screen.png";
 // 
 import Image from 'next/image';
-import Button from '@/components/common/buttons/Button'; // Assuming you have the Button component in a separate file
+import { OutlineButton } from '../common/buttons/Button'
 
 const projectsArray = [
     {
@@ -37,8 +37,8 @@ function SelectedWork() {
                 <div className='z-[2] flex flex-col lg:grid grid-cols-2 gap-10 lg:gap-5 '>
                     {projectsArray.map((project, index) => (
                         <RevealWrapper key={index} delay={1300 * index}>
-                            <div>
-                                <div className='w-[90vw] h-[35vh] lg:w-[30rem] lg:h-[15rem] bg-black relative z-[2]'>
+                            <div className=''>
+                                <div className='w-[90vw] h-[35vh] lg:w-[30rem] lg:h-[15rem] bg-black relative z-[2] \'>
                                     <Image
                                         layout="fill"
                                         objectFit="cover"
@@ -47,12 +47,12 @@ function SelectedWork() {
                                     />
 
                                 </div>
-                                <div className=" flex flex-col justify-center text-left items-start mb-5 ">
+                                <div className=" flex flex-col justify-center text-left items-start mb-5 ml-5 ">
                                     <h4 className='text-[#000] font-[300] '>{project.title}</h4>
-                                    <h5 className='text-[#000] font-[300] leading-4'>{project.desc}</h5>
+                                    <h5 className='text-[#000] font-[300] leading-4 mb-5'>{project.desc}</h5>
 
+                                    <OutlineButton text='Vezi proiectul' />
                                 </div>
-                                <Button link={project.link} text="Vezi proiectul" type="outline" color="#000" />
                             </div>
                         </RevealWrapper>
 
