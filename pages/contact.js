@@ -10,15 +10,15 @@ export default function contact() {
     return (
         <div className="overflow-x-hidden relative scroll-smooth">
             <Navigation_Bar />
-            <Page>
+            <div className='flex flex-col lg:flex-row'>
                 <div className='w-full lg:w-1/2 flex items-center justify-center flex-col text-center mb-10 h-[50vh]'>
                     <RevealWrapper delay={1000}>
-                        <h3 className=' uppercase  text-[#000] leading-[2.3rem] lg:leading-[5rem] font-[300]  px-5 py-5 rounded-2xl '>
+                        <h3 className=' uppercase  text-[#000] leading-[2rem] lg:leading-[5rem] font-[300] '>
                             Dezvoltator Web
                         </h3>
                         </RevealWrapper>
                         <RevealWrapper>
-                        <h1 className='uppercase  text-[#000] leading-[2.3rem] lg:leading-[6rem] font-[600]  px-5 py-5 rounded-2xl'>Alexandru Lăzărescu</h1>
+                        <h1 className='uppercase  text-[#000] leading-[3rem] lg:leading-[6rem] font-[600]'>Alexandru Lăzărescu</h1>
                         </RevealWrapper>
                     <RevealWrapper delay={1200}>
                         <p className='text-[#000] leading-[1.5rem] lg:leading-[2rem] mb-5'>Dacă doriți să luați legătura, vă rog să mă contactați folosind informațiile de mai jos:</p>
@@ -35,7 +35,7 @@ export default function contact() {
                         <Image width={250} height={250} src={QRCode} />
                     </RevealWrapper>
                 </div>
-            </Page>
+            </div>
             <Footer />
         </div>
     )

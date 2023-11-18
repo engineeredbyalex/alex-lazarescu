@@ -10,8 +10,7 @@ import Zenboard from "@/public/assets/zenboard.png";
 // 
 import Image from 'next/image';
 import { OutlineButton } from '../common/buttons/Button'
-import Wrapper from '../layout/content/Wrapper';
-import Center from '../layout/content/Center';
+
 
 const projectsArray = [
     {
