@@ -7,7 +7,7 @@ import { SocialIcon } from 'react-social-icons'
 // 
 import Wrapper from '@/components/layout/content/Wrapper'
 // 
-import Logo from "@/public/logo/small_Logo_alt.png"
+import Logo from '@/public/logo/logo.png'
 
 
 function Footer() {

@@ -1,18 +1,26 @@
-import Link from "next/link";
+// OutlineButton.js
+import React from 'react';
+import Link from 'next/link';
 
-export function OutlineButton(props) {
+export const OutlineButton = ({ link, text }) => {
+
     return (
-        <Link className="button button_outline button_outline_slide_right" href={'/'}>
-            <h5>{props.text}</h5>
+        <Link href={`/${link}`}>
+            <div className="button button_outline button_outline_slide_right" target="_blank" rel="noopener noreferrer">
+                <h5>{text}</h5>
+            </div>
         </Link>
-    )
-}
+    );
+};
 
 
-export function SolidButton(props) {
+export const SolidButton = ({ link, text }) => {
+
     return (
-        <Link className="button button_solid button_solid_transform " href={'/'}>
-            <h5>{props.text}</h5>
+        <Link href={`/${link}`}>
+            <div className="button button_solid  button_solid_transform" target="_blank" rel="noopener noreferrer">
+                <h5>{text}</h5>
+            </div>
         </Link>
-    )
-}
+    );
+};
