@@ -5,8 +5,16 @@ import QRCode from '@/public/assets/qr.png';
 import Image from 'next/image';
 import { RevealWrapper } from 'next-reveal';
 import Footer from '@/components/common/footer/Footer';
+import { FaRegClipboard } from "react-icons/fa";
 
 export default function Contact() {
+    const email = 'dev.lazarescu.alexandru@gmail.com';
+
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText(email).then(() => {
+
+        });
+    };
     return (
         <div className="overflow-x-hidden relative ">
             <Navigation_Bar />
@@ -24,11 +32,15 @@ export default function Contact() {
                         </p>
                     </RevealWrapper>
                     <RevealWrapper delay={1400}>
-                        <div className='flex flex-col lg:flex-row items-center justify-center  mb-5'>
-                            <p className="text-[#000] leading-[1.5rem] lg:leading-[1rem] border px-3 py-3 border-black mb-5 lg:mb-0 ">
-                                Email: <a href="mailto:dev.lazarescu.alexandru@gmail.com">dev.lazarescu.alexandru@gmail.com</a>
+                        <div className="flex flex-col items-center justify-center mb-5 lg:gap-5">
+                            <p className="text-[#000] leading-[1.5rem] lg:leading-[1rem] border px-3 py-3 border-black mb-5 lg:mb-0">
+                                Email: <a href={`mailto:${email}`}>{email}</a>
                             </p>
-                            <p className='px-3 py-3 bg-[#9b9b9b] text-white rounded-lg'> Apasă pe email </p>
+                            <button onClick={copyToClipboard} className="px-3 py-3 bg-[#9b9b9b] text-white rounded-lg flex items-center justify-center gap-5 ">
+                                <h6 >
+                                    Apasă pe adresa de email pentru a-mi trimite un mesaj sau aici pentru a copia adresa de email.</h6>
+                                <FaRegClipboard size={30} />
+                            </button>
                         </div>
                     </RevealWrapper>
 

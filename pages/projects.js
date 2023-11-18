@@ -11,6 +11,7 @@ import Zenboard from "@/public/assets/zenboard.png";
 import Image from 'next/image';
 import { OutlineButton } from '@/components/common/buttons/Button';
 import Navigation_Bar from '@/components/common/header/Navigation_Bar';
+import Footer from '@/components/common/footer/Footer';
 
 const projectsArray = [
     {
@@ -74,6 +75,7 @@ function Projects() {
                 </div>
 
             </Page>
+            <Footer />
         </div>
     );
 }
