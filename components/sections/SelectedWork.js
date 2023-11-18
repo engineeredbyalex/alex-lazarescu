@@ -6,7 +6,7 @@ import { RevealWrapper } from 'next-reveal'
 import MaybeeScreen from "@/public/assets/maybee.ro.png";
 import WeatherScreen from "@/public/assets/open-weather-screen.png";
 import LuminéElysian from "@/public/assets/LuminéElysian.png";
-import Zenboard from "@/public/assets/Zenboard.png";
+import Zenboard from "@/public/assets/zenboard.png";
 // 
 import Image from 'next/image';
 import { OutlineButton } from '../common/buttons/Button'
