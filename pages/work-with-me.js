@@ -11,11 +11,7 @@ function WorkPage() {
     return (
         <Page>
             <Navigation_Bar />
-            <div className="video-background">
-                <video autoPlay muted loop id="bg_video">
-                    <source src={AnimatedBackground} type="video/mp4" />
-                </video>
-            </div>
+
         </Page>
     )
 }
