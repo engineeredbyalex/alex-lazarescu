@@ -16,7 +16,7 @@ const projectsArray = [
     {
         title: 'MAYBEE',
         desc: 'Dezvoltare web - Design interfață',
-        link: '/',
+        link: 'https://www.maybee.ro',
         image: MaybeeScreen,
         tech: 'NextJS 13, MongoDB, Amzon S3',
     },
@@ -31,7 +31,7 @@ const projectsArray = [
     {
         title: 'Luminé Elysian',
         desc: 'Design 3D - Branding',
-        link: '/',
+        link: 'https://www.behance.net/gallery/184814471/Lumin-Elysian?',
         image: LuminéElysian,
         tech: '/',
     },
