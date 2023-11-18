@@ -24,7 +24,7 @@ function LandingPage() {
                     </RevealWrapper>
                     <RevealWrapper delay={1600}>
                         <h5 className=' uppercase  text-[#000] leading-5  lg:leading-[1.3rem] font-light mb-5   text-left w-[100%]'>
-                            Salut ! <br /> Eu sunt Alex Lăzărescu. <br /> Bine ai venit pe portofoilul meu.
+                            Salut! <br /> Eu sunt Alex Lăzărescu. <br /> Bine ai venit pe site-ul meu.
                         </h5>
                     </RevealWrapper>
                 </div>
