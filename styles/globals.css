@@ -92,3 +92,6 @@
   border-radius: 20px;
  transition: ease-in-out 0.4s;
 }
+.transition-bg {
+  background: linear-gradient(to bottom, transparent 0%, #000 100%);
+}

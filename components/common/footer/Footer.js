@@ -19,7 +19,8 @@ function Footer() {
                     < SocialIcon className='scale-75' bgColor='black' url='https://github.com/engineeredbyalex' />
                     <SocialIcon className='scale-75' bgColor='black' url='https://www.linkedin.com/in/alexandru-lazarescu-784031252/' />
                     <SocialIcon className='scale-75' bgColor='black' url='https://www.instagram.com/nusuntlaza/' />
-                    <SocialIcon className='scale-75' bgColor='black' url='dev.lazarescu.alexandru@gmail.com' />
+
+                    <SocialIcon className='scale-75' bgColor='black' url='https://www.behance.net/lazaresalexand1' />
                 </div>
             </div>
 

@@ -43,12 +43,12 @@ function SelectedWork() {
     return (
         <Page>
             <div className="flex h-auto items-start justify-center w-full  flex-col  text-center ">
-                <RevealWrapper delay={1000}>
+                <RevealWrapper delay={5000}>
                     <h3 className="text-[#000] leading-[4rem] lg:leading-[8rem] uppercase font-normal  ">Proiecte alese</h3>
                 </RevealWrapper>
                 <div className='flex justify-between w-full flex-row flex-wrap  '>
                     {projectsArray.map((project, index) => (
-                        <RevealWrapper className="mb-10  " key={index} delay={100 * index}>
+                        <RevealWrapper className="mb-10  " key={index} delay={500 * index}>
                             <Image className='lg:w-[40vw] ' src={project.image} />
                             <div className='w-full flex justify-between'>
                                 <h4>{project.title}</h4>
