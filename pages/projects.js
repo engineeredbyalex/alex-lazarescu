@@ -2,50 +2,23 @@
 import Page from '@/components/layout/page/Page';
 // importing Reveal Wrapper
 import { RevealWrapper } from 'next-reveal'
-// 
-import MaybeeScreen from "@/public/assets/maybee.ro.png";
-import WeatherScreen from "@/public/assets/open-weather-screen.png";
-import LuminéElysian from "@/public/assets/LuminéElysian.png";
-import Zenboard from "@/public/assets/zenboard.png";
-// 
-import Image from 'next/image';
+
 import { OutlineButton } from '@/components/common/buttons/Button';
 import Navigation_Bar from '@/components/common/header/Navigation_Bar';
 import Footer from '@/components/common/footer/Footer';
 
-const projectsArray = [
-    {
-        title: 'MAYBEE',
-        desc: 'Dezvoltare web - Design interfață',
-        link: 'https://www.maybee.ro',
-        image: MaybeeScreen,
-        tech: 'NextJS 13, MongoDB, Amzon S3',
-    },
-    {
-        title: 'Zenboard',
-        desc: 'Dezvoltare web - Design interfață',
-        link: '/',
-        image: Zenboard,
-        tech: '/',
-    },
-
-    {
-        title: 'Luminé Elysian',
-        desc: 'Design 3D - Branding',
-        link: 'https://www.behance.net/gallery/184814471/Lumin-Elysian?',
-        image: LuminéElysian,
-        tech: '/',
-    },
-    {
-        title: 'Open Weather',
-        desc: 'Dezvoltare web - Design interfață',
-        link: 'maybee.ro',
-        image: WeatherScreen,
-        tech: 'JavaScript OpenWeather Api',
-    },
-];
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Projects() {
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        axios.get('/api/products').then(response => {
+            setProjects(response.data);
+
+        });
+    }, []);
     return (
         <div className='overflow-x-hidden relative'>
             <Navigation_Bar />
@@ -55,17 +28,17 @@ function Projects() {
                         <h3 className="text-[#000] leading-[4rem] lg:leading-[8rem] uppercase font-normal  ">Proiecte</h3>
                     </RevealWrapper>
                     <div className='flex justify-between w-full flex-row flex-wrap ' >
-                        {projectsArray.map((project, index) => (
-                            <RevealWrapper className="mb-10" key={index} delay={500 * index}>
-                                <Image className='lg:w-[45vw]' src={project.image} />
+                        {projects.map(project => (
+                            <RevealWrapper className="mb-10" key={project._id} delay={500 * project._id}>
+                                <img className='lg:w-[45vw]' src={project.images[0]} />
                                 <div className='w-full flex justify-between'>
                                     <h4>
                                         {project.title}
+
                                     </h4>
-                                    <h5 className='text-right lg:text-center'>
+                                    <h5>
                                         {project.desc}
                                     </h5>
-
                                 </div>
                                 <OutlineButton text='Vezi proiectul' link={project.link} />
                             </RevealWrapper>

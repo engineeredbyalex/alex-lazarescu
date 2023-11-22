@@ -2,65 +2,53 @@
 import Page from '../layout/page/Page'
 // importing Reveal Wrapper
 import { RevealWrapper } from 'next-reveal'
+//
+
+import { useEffect, useState } from "react";
+import axios from "axios";
 // 
-import MaybeeScreen from "@/public/assets/maybee.ro.png";
-import WeatherScreen from "@/public/assets/open-weather-screen.png";
-import LuminéElysian from "@/public/assets/LuminéElysian.png";
-import Zenboard from "@/public/assets/zenboard.png";
-// 
-import Image from 'next/image';
 import { OutlineButton } from '../common/buttons/Button'
+import Link from 'next/link';
 
-import { useRouter } from 'next/router';
 
-const projectsArray = [
-    {
-        title: 'MAYBEE',
-        desc: 'Dezvoltare web - Design interfață',
-        link: 'https://www.maybee.ro',
-        image: MaybeeScreen,
-        tech: 'NextJS 13, MongoDB, Amzon S3',
-    },
-    {
-        title: 'Zenboard',
-        desc: 'Dezvoltare web - Design interfață',
-        link: '/',
-        image: Zenboard,
-        tech: '/',
-    },
-
-    {
-        title: 'Luminé Elysian',
-        desc: 'Design 3D - Branding',
-        link: 'https://www.behance.net/gallery/184814471/Lumin-Elysian?',
-        image: LuminéElysian,
-        tech: '/',
-    },
-];
 
 function SelectedWork() {
+    const [projects, setProjects] = useState([]);
 
+
+    useEffect(() => {
+
+        axios.get('/api/products').then(response => {
+            setProjects(response.data);
+
+        });
+    }, [])
     return (
         <Page>
             <div className="flex h-auto items-start justify-center w-full  flex-col  text-center ">
                 <RevealWrapper delay={5000}>
-                    <h3 className="text-[#000] leading-[4rem] lg:leading-[8rem] uppercase font-normal  ">Proiecte alese</h3>
+                    <div className=' flex gap-5  items-center'>
+                        <h3 className="text-[#000] leading-[4rem] lg:leading-[8rem] uppercase font-normal  ">Proiecte alese</h3>
+                        <Link className='button_outline button button_outline_slide_right' href={'/projects'}><h5>Vezi mai multe proiecte</h5> </Link>
+                    </div>
                 </RevealWrapper>
                 <div className='flex justify-between w-full flex-row flex-wrap  '>
-                    {projectsArray.map((project, index) => (
-                        <RevealWrapper className="mb-10  " key={index} delay={500 * index}>
-                            <Image className='lg:w-[40vw] ' src={project.image} />
-                            <div className='w-full flex justify-between'>
-                                <h4>{project.title}</h4>
+                    {projects.slice(0, 4).map(project => (
+                        <RevealWrapper className="mb-10" key={project._id} delay={1000 * project._id}>
+                            <img className='lg:w-[45vw]' src={project.images[0]} />
+                            <div className='w-full  flex justify-between items-start flex-col lg:flex-row lg:items-center '>
+                                <h4 className='text-left'>{project.title}</h4>
                                 <h5 className='text-right lg:text-center'>{project.desc}</h5>
                             </div>
                             <OutlineButton text='Vezi proiectul' link={project.link} />
                         </RevealWrapper>
                     ))}
+
                 </div>
             </div>
         </Page>
     );
 }
+
 
 export default SelectedWork;

@@ -7,6 +7,7 @@ import { OutlineButton } from '../common/buttons/Button'
 import { SolidButton } from '../common/buttons/Button'
 
 
+
 function LandingPage() {
     return (
         <Page>
@@ -23,10 +24,11 @@ function LandingPage() {
                         </h1>
                     </RevealWrapper>
                     <RevealWrapper delay={1600}>
-                        <h5 className=' uppercase  text-[#000] leading-5  lg:leading-[1.3rem] font-light mb-5   text-left w-[100%]'>
-                            Salut! <br /> Eu sunt Alex Lăzărescu. <br /> Bine ai venit pe site-ul meu.
-                        </h5>
+                        <h4 className=' uppercase  text-[#000] leading-5  lg:leading-[1.5rem] font-light mb-5   text-left w-[100%]'>
+                            Bine ai venit pe site-ul meu.
+                        </h4>
                     </RevealWrapper>
+
                 </div>
                 <div className='flex w-full h-1/2 gap-[1rem] items-start  justify-start  flex-col lg:flex-row lg:items-center lg:gap-[5rem] z-[2]'>
                     <RevealWrapper delay={1900}>

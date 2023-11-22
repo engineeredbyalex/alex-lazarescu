@@ -6,6 +6,9 @@ import LandingPage from "@/components/sections/LandingPage";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TestimonailSection from "@/components/sections/TestimonailSection";
 import SelectedWork from "@/components/sections/SelectedWork";
+import AboutMeSection from '@/components/sections/AboutMeSection';
+
+
 
 export default function Home() {
 
@@ -15,6 +18,7 @@ export default function Home() {
       <Navigation_Bar />
       <LandingPage />
       <SelectedWork />
+      <AboutMeSection />
       <ServicesSection />
       <TestimonailSection />
       <Footer />

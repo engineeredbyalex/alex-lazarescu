@@ -28,11 +28,11 @@ export default function Contact() {
                     </RevealWrapper>
                     <RevealWrapper delay={1000}>
                         <p className="text-[#000] leading-[1.5rem] lg:leading-[2rem] mb-5">
-                            Dacă doriți să luați legătura, vă rog să mă contactați folosind informațiile de mai jos:
+                            Dacă doriți să luați legătura cu mine, vă rog să mă contactați folosind informațiile de mai jos:
                         </p>
                     </RevealWrapper>
                     <RevealWrapper delay={1400}>
-                        <div className="flex flex-col items-center justify-center mb-5 lg:gap-5">
+                        <div className="flex flex-col items-center justify-center mb-5 lg:gap-5  lg:ml-[30px]">
                             <p className="text-[#000] leading-[1.5rem] lg:leading-[1rem] border px-3 py-3 border-black mb-5 lg:mb-0">
                                 Email: <a href={`mailto:${email}`}>{email}</a>
                             </p>
@@ -45,8 +45,9 @@ export default function Contact() {
                     </RevealWrapper>
 
                 </div>
-                <div className="w-full lg:w-1/2 flex items-center lg:items-start justify-center">
-                    <RevealWrapper delay={1600}>
+                <div className="w-full lg:w-1/2 flex items-center lg:items-start justify-center ">
+
+                    <RevealWrapper delay={1800}>
                         <Image width={250} height={250} src={QRCode} />
                     </RevealWrapper>
                 </div>
