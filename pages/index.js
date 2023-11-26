@@ -18,7 +18,7 @@ export default function Home() {
       <Navigation_Bar />
       <LandingPage />
       <SelectedWork />
-      <AboutMeSection />
+      {/* <AboutMeSection /> */}
       <ServicesSection />
       <TestimonailSection />
       <Footer />
