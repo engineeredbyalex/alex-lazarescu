@@ -26,8 +26,8 @@ function SelectedWork() {
                 <h3 style={{ textTransform: "uppercase", margin: '60px 0px 60px 0px' }}>Featured Projects</h3>
                 <div className='projects_grid'>
                     {projects.slice(0, 4).map(project => (
-                        <div className='project '>
-                            <RevealWrapper key={project._id} delay={500 * project._id}>
+                        <div key={project._id} className='project '>
+                            <RevealWrapper delay={500 * project._id}>
                                 <div style={{ display: "flex", flexDirection: 'column', alignItems: "center", justifyContent: "center", width: '100%', margin: '50px 0px 0px 0px', }}>
                                     <h3 style={{ textTransform: "uppercase", fontWeight: "normal", lineHeight: 0, marginBlock: '30px' }}>{project.title}</h3>
                                     <p style={{ textTransform: "uppercase", fontWeight: "normal", lineHeight: 0, marginBottom: '50px' }} >{project.desc}</p>
