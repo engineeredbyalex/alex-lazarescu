@@ -1,5 +1,5 @@
-import Navigation_Bar from '@/components/common/header/Navigation_Bar';
-import Page from '@/components/layout/page/Page';
+import Navigation_Bar from '@/components/common/header/Header';
+import Page from '@/components/layout/Page';
 import React from 'react';
 import QRCode from '@/public/assets/qr.png';
 import Image from 'next/image';
@@ -48,7 +48,7 @@ export default function Contact() {
                 <div className="w-full lg:w-1/2 flex items-center lg:items-start justify-center ">
 
                     <RevealWrapper delay={1800}>
-                        <Image width={250} height={250} src={QRCode} />
+                        <Image alt='' width={250} height={250} src={QRCode} />
                     </RevealWrapper>
                 </div>
             </div>

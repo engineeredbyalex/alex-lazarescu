@@ -1,9 +1,9 @@
 // importing Page
-import Page from '../layout/page/Page'
+import Page from '../layout/Page'
 // importing Reveal Wrapper
 import { RevealWrapper } from 'next-reveal'
 // importing testimonial box
-import TestimonailBox from '../layout/content/TestimonailBox'
+import TestimonailBox from '../layout/TestimonailBox'
 function TestimonailSection() {
     return (
         <Page>

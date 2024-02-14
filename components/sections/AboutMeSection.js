@@ -17,7 +17,7 @@ import Image from 'next/image'
 import Headshot from "@/public/images/headshot.jpeg"
 // 
 import { RevealWrapper } from "next-reveal"
-import Page from "../layout/page/Page"
+import Page from "../layout/Page"
 
 
 function AboutMeSection() {

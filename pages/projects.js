@@ -1,10 +1,10 @@
 // importing Page
-import Page from '@/components/layout/page/Page';
+import Page from '@/components/layout/Page';
 // importing Reveal Wrapper
 import { RevealWrapper } from 'next-reveal'
 
 import { OutlineButton } from '@/components/common/buttons/Button';
-import Navigation_Bar from '@/components/common/header/Navigation_Bar';
+import Navigation_Bar from '@/components/common/header/Header';
 import Footer from '@/components/common/footer/Footer';
 
 import { useEffect, useState } from "react";
@@ -14,7 +14,7 @@ function Projects() {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        axios.get('/api/products').then(response => {
+        axios.get('/api/project').then(response => {
             setProjects(response.data);
 
         });
@@ -30,7 +30,7 @@ function Projects() {
                     <div className='flex justify-between w-full flex-row flex-wrap ' >
                         {projects.map(project => (
                             <RevealWrapper className="mb-10" key={project._id} delay={500 * project._id}>
-                                <img className='lg:w-[45vw]' src={project.images[0]} />
+                                <img alt='' className='lg:w-[45vw]' src={project.images[0]} />
                                 <div className='w-full flex justify-between'>
                                     <h4>
                                         {project.title}

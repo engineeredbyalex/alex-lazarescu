@@ -1,57 +1,37 @@
+import Page from '@/components/layout/Page';
 import React, { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { Expo } from 'gsap';
 
 const LoadingScreen = () => {
-    const [isLoaded, setIsLoaded] = useState(false);
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        // Check if the loading screen has been shown
-        const hasLoadedBefore = localStorage.getItem('hasLoadedBefore');
-
-        if (!hasLoadedBefore) {
-            const loadingScreen = document.querySelector('.loading-screen');
-            const barcode = document.querySelector('.barcode');
-            const barcodeText = document.querySelector('.barcode-text');
-            const tl = gsap.timeline();
-
-            tl.to(barcode, { scaleY: 0, duration: 2.5, delay: 2.5, ease: Expo.easeInOut })
-                .to(barcodeText, { y: -100, duration: 1, ease: Expo.easeInOut }, '-=1')
-                .to(loadingScreen, { y: '-100%', duration: 2.5, ease: Expo.easeInOut }, '-=1')
-                .then(() => {
-                    loadingScreen.style.zIndex = -1;
-
-                    // Set a flag in local storage to indicate that the loading screen has been shown
-                    localStorage.setItem('hasLoadedBefore', 'true');
-                    setIsLoaded(true);
-                });
-        } else {
-            // If the loading screen has been shown before, mark it as loaded
-            setIsLoaded(true);
-        }
+        const loadingTimeout = setTimeout(() => {
+            setLoaded(true);
+        }, 1000);
+        return () => clearTimeout(loadingTimeout);
     }, []);
+    useEffect(() => {
+        if (loaded) {
+            gsap.to('.loading_screen_number', { duration: 2, innerHTML: '100%', ease: Expo.easeOut });
+            gsap.to('.loading_screen_bar', { duration: 2, width: '100%', ease: Expo.easeOut, });
+            gsap.to('.loading_screen', { delay: 4, ease: Expo.easeOut, opacity: 0, zIndex: -1 });
+        } else {
+            gsap.to('.loading_screen_number', { duration: 2, innerHTML: '0%', ease: Expo.easeOut });
+        }
+    }, [loaded]);
 
     return (
-        isLoaded ? null : (
-            <div className="loading-screen" style={{ zIndex: 3 }}>
-                <div className="barcode">
-                    <div className="line short"></div>
-                    <div className="line long"></div>
-                    <div className="line medium"></div>
-                    <div className="line short"></div>
-                    <div className="line long"></div>
-                    <div className="line medium"></div>
-                    <div className="line short"></div>
-                    <div className="line long"></div>
-                    <div className="line medium"></div>
-                    <div className="line short"></div>
-                    <div className="line short"></div>
-                    <div className="line medium"></div>
-                    <div className="line long"></div>
+        <div className='loading_screen'>
+            <Page>
+                <div className='loading_screen_container'>
+                    <div className='loading_screen_number'>0%</div>
+                    <div className='loading_screen_bar'></div>
                 </div>
-            </div>
-        )
+            </Page>
+        </div>
     );
-};
+}
 
 export default LoadingScreen;

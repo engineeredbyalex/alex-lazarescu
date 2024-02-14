@@ -1,13 +1,13 @@
 // 
-import Center from '../../layout/content/Center'
+import Center from '../../layout/Center'
 // 
 import Image from 'next/image'
 // 
 import { SocialIcon } from 'react-social-icons'
 // 
-import Wrapper from '@/components/layout/content/Wrapper'
+import Wrapper from '@/components/layout/Wrapper'
 // 
-import Logo from '@/public/logo/logo.png'
+import Logo from '@/public/logo/logo.svg'
 
 
 function Footer() {

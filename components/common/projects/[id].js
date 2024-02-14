@@ -1,5 +1,5 @@
 import React from 'react'
-import Navigation_Bar from '../header/Navigation_Bar'
+import Navigation_Bar from '../header/Header'
 import { mongooseConnect } from "@/lib/mongoose";
 import { Product } from "@/models/Product";
 

@@ -1,44 +1,73 @@
 // importing Page
-import Page from '../layout/page/Page'
+import Page from '../layout/Page'
 // importing Reveal Wrapper
 import { RevealWrapper } from 'next-reveal'
 // importing Button
 import { OutlineButton } from '../common/buttons/Button'
 import { SolidButton } from '../common/buttons/Button'
+import Info from '../common/info/Info'
 
+// 
+import { useState, useEffect } from 'react';
 
 
 function LandingPage() {
+    const [letters, setLetters] = useState([]);
+
+    useEffect(() => {
+        const string = 'MODERM WEB EXPERIENCES FOR BRANDS';
+        const letterArray = string.split('').map((letter, index) => ({
+            letter,
+            id: index
+        }));
+
+        setLetters(letterArray);
+    }, []);
+
     return (
         <Page>
-            <div className="flex items-start justify-evenly lg:justify-center w-full h-full flex-col  text-center">
-                <div className='h-1/2 flex items-start justify-start lg:justify-center flex-col'>
+            <div className='page_container'>
+                <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'center', }}>
                     <RevealWrapper delay={1000}>
-                        <h1 className=' uppercase  text-[#000] leading-[2.3rem] lg:leading-[2.6rem] font-[600] mb-5 lg:mb-10   text-left'>
-                            Dezvoltator Web
-                        </h1>
+                        <Info />
                     </RevealWrapper>
-                    <RevealWrapper delay={1300}>
-                        <h1 className=' uppercase  text-[#000] leading-[2.3rem] lg:leading-[2.6rem] font-[600] mb-5 lg:mb-10    text-left'>
-                            Designer grafic
-                        </h1>
-                    </RevealWrapper>
-                    <RevealWrapper delay={1600}>
-                        <h4 className=' uppercase  text-[#000] leading-5  lg:leading-[1.5rem] font-light mb-5   text-left w-[100%]'>
-                            Bine ai venit pe site-ul meu.
-                        </h4>
-                    </RevealWrapper>
-
+                    <div>
+                        <RevealWrapper delay={1300} >
+                            <h1>
+                                I BUILD
+                            </h1>
+                        </RevealWrapper>
+                        <RevealWrapper delay={1600} >
+                            <h1>
+                                MODERN
+                            </h1>
+                        </RevealWrapper>
+                        <RevealWrapper delay={1900} >
+                            <h1>
+                                WEB
+                            </h1>
+                        </RevealWrapper>
+                        <RevealWrapper delay={2200} >
+                            <h1>
+                                EXPERIENCES
+                            </h1>
+                        </RevealWrapper>
+                        <RevealWrapper delay={2500} >
+                            <h1>
+                                FOR BRANDS
+                            </h1>
+                        </RevealWrapper>
+                    </div>
                 </div>
-                <div className='flex w-full h-1/2 gap-[1rem] items-start  justify-start  flex-col lg:flex-row lg:items-center lg:gap-[5rem] z-[2]'>
-                    <RevealWrapper delay={1900}>
-                        <OutlineButton link="/projects" text='Proiecte' />
+                <div style={{ width: '100%', display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: "1rem" }}>
+                    <RevealWrapper delay={2800} >
+
+                        <OutlineButton text="SEE MY WORK" />
                     </RevealWrapper>
-                    <RevealWrapper delay={2200}>
-                        <SolidButton link="/contact" text='Contact' />
+                    <RevealWrapper delay={3100} >
+                        <SolidButton text="CONTACT ME" />
                     </RevealWrapper>
                 </div>
-
             </div>
         </Page>
     )

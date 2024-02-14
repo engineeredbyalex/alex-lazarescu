@@ -1,2 +1,10 @@
-this is a to do list
-1. use gsap for navbar
+1.admin page for portfolio
+1.moudlairity
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.

@@ -1,8 +1,3 @@
-// 
-import Button from '@/components/common/buttons/Button';
-// 
-import React from 'react';
-
 function ServiceBox(props) {
     return (
         <div className=' lg:w-full lg:h-[15rem]  bg-[#000] flex items-center justify-center flex-col rounded-2xl text-[#fff] '>

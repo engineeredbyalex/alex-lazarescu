@@ -1,49 +1,44 @@
 // importing Page
-import Page from '../layout/page/Page'
+import Page from '../layout/Page'
 // importing Reveal Wrapper
 import { RevealWrapper } from 'next-reveal'
-//
-
-import { useEffect, useState } from "react";
+// inporting axios
 import axios from "axios";
-// 
+// importing useState
+import { useEffect, useState } from "react";
+// importing button
 import { OutlineButton } from '../common/buttons/Button'
-import Link from 'next/link';
-
 
 
 function SelectedWork() {
     const [projects, setProjects] = useState([]);
-
-
     useEffect(() => {
-
-        axios.get('/api/products').then(response => {
+        axios.get('/api/project').then(response => {
             setProjects(response.data);
-
         });
     }, [])
+
+
+
     return (
         <Page>
-            <div className="flex h-auto items-start justify-center w-full  flex-col  text-center ">
-                <RevealWrapper delay={5000}>
-                    <div className=' flex gap-5  items-center'>
-                        <h3 className="text-[#000] leading-[4rem] lg:leading-[8rem] uppercase font-normal  ">Proiecte alese</h3>
-                        <Link className='button_outline button button_outline_slide_right' href={'/projects'}><h5>Vezi mai multe proiecte</h5> </Link>
-                    </div>
-                </RevealWrapper>
-                <div className='flex justify-between w-full flex-row flex-wrap  '>
+            <div className="page_container">
+                <h3 style={{ textTransform: "uppercase", margin: '60px 0px 60px 0px' }}>Featured Projects</h3>
+                <div className='projects_grid'>
                     {projects.slice(0, 4).map(project => (
-                        <RevealWrapper className="mb-10" key={project._id} delay={1000 * project._id}>
-                            <img className='lg:w-[45vw]' src={project.images[0]} />
-                            <div className='w-full  flex justify-between items-start flex-col lg:flex-row lg:items-center '>
-                                <h4 className='text-left'>{project.title}</h4>
-                                <h5 className='text-right lg:text-center'>{project.desc}</h5>
-                            </div>
-                            <OutlineButton text='Vezi proiectul' link={project.link} />
-                        </RevealWrapper>
+                        <div className='project '>
+                            <RevealWrapper key={project._id} delay={500 * project._id}>
+                                <div style={{ display: "flex", flexDirection: 'column', alignItems: "center", justifyContent: "center", width: '100%', margin: '50px 0px 0px 0px', }}>
+                                    <h3 style={{ textTransform: "uppercase", fontWeight: "normal", lineHeight: 0, marginBlock: '30px' }}>{project.title}</h3>
+                                    <p style={{ textTransform: "uppercase", fontWeight: "normal", lineHeight: 0, marginBottom: '50px' }} >{project.desc}</p>
+                                </div>
+                                <img style={{ width: '200px', height: '400px' }} src={project?.images[1]} alt={project._id} />
+                                <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '20px 0px 50px 0px' }}>
+                                    <OutlineButton text='VEZI PROIECTUL' link={project.link} />
+                                </div>
+                            </RevealWrapper>
+                        </div>
                     ))}
-
                 </div>
             </div>
         </Page>
