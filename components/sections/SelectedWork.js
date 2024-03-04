@@ -34,7 +34,7 @@ function SelectedWork() {
                                 </div>
                                 <img style={{ width: '200px', height: '400px' }} src={project?.images[1]} alt={project._id} />
                                 <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '20px 0px 50px 0px' }}>
-                                    <OutlineButton text='VEZI PROIECTUL' link={project.link} />
+                                    <OutlineButton text='TAKE A LOOK' link={project.link} />
                                 </div>
                             </RevealWrapper>
                         </div>

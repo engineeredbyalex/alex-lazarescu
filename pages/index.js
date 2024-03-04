@@ -5,6 +5,8 @@ import LandingPage from "@/components/sections/LandingPage";
 import SelectedWork from "@/components/sections/SelectedWork";
 import ServicesSection from '@/components/sections/ServicesSection';
 import AboutMeSection from '@/components/sections/AboutMeSection';
+import Background from '@/components/common/background/Background';
+
 
 
 
@@ -13,7 +15,6 @@ export default function Home() {
 
   return (
     <div >
-      {/* <LoadingScreen /> */}
       <Navigation_Bar />
       <LandingPage />
       <SelectedWork />

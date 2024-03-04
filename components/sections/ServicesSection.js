@@ -11,35 +11,81 @@ function ServicesSection() {
                 <div className='projects_grid' >
                     <div className='service_card'>
                         <h3>WEB DEVELOPMENT</h3>
-                        <h4>Web Development Services Tailored to Your Specific Needs.
-                            Each Project is Crafted with Attention to Detail and Optimized for Maximum Performance.
-                        </h4>
+                        <div className='projects_grid'>
+                            <h4>FRONT-END</h4>
+                            <h4>BACK-END</h4>
+                            <h4>UX-UI DESIGN</h4>
+                            <h4>DEPLOYMENT</h4>
+                            <h4>GRAPHIC DESIGN</h4>
+                            <h4>API INTEGRATIONS</h4>
+                            <h4>Multiple themes</h4>
+                        </div>
                     </div>
                     <div className='service_card'>
                         <h3>
-                            DESIGN
+                            FRONT-END  <br /> DEVELOPMENT
                         </h3>
-                        <h4>
-                            I offer graphic design services for interfaces, promotional materials, and branding. From posters to 3D product renders, I focus on creativity and impact.
-                        </h4>
+                        <div className='projects_grid'>
+                            <h4>HTML</h4>
+                            <h4>CSS</h4>
+                            <h4>JavaScript</h4>
+                            <h4>React JS</h4>
+                            <h4>NextJS</h4>
+                            <h4>TailwindCss</h4>
+                            <h4>NODE.js</h4>
+                        </div>
                     </div>
                     <div className='service_card'>
                         <h3>
-                            CONSULTING
+                            BACK-END <br /> DEVELOPMENT
                         </h3>
-                        <h4>
-                            Before starting a project, we discuss together and offer consulting to identify the best solutions adapted to your needs.
-                        </h4>
+                        <div className='projects_grid'>
+                            <h4>API INTEGRATIONS</h4>
+                            <h4>AI INTEGRATIONS</h4>
+                            <h4>MongoDB</h4>
+                            <h4>AmazonS3</h4>
+                            <h4>Google Firebase</h4>
+                        </div>
                     </div>
                     <div className='service_card'>
                         <h3>
-                            MAINTENANCE
+                            WEB DESIGN
                         </h3>
-                        <h4>
-                            After completing a project, I offer personalized maintenance services to ensure that everything is working at its best.
-                        </h4>
+                        <div className='projects_grid'>
+                            <h4>FIGMA</h4>
+                            <h4>ADOBE AI</h4>
+                            <h4>ADOBE PS</h4>
+                            <h4>ADOBE XD</h4>
+                            <h4>PROTOTYPING</h4>
+                            <h4>Ai Generation</h4>
+                        </div>
                     </div>
-
+                    <div className='service_card'>
+                        <h3>
+                            GRAPHIC DESIGN
+                        </h3>
+                        <div className='projects_grid'>
+                            <h4>FIGMA</h4>
+                            <h4>ADOBE AI</h4>
+                            <h4>ADOBE PS</h4>
+                            <h4>ADOBE XD</h4>
+                            <h4>BLENDER</h4>
+                            <h4>Ai Generation</h4>
+                        </div>
+                    </div>
+                    <div className='service_card'>
+                        <h3>
+                            MARKETING
+                        </h3>
+                        <div className='projects_grid'>
+                            <h4>INSTAGRAM</h4>
+                            <h4>FACEBOOK</h4>
+                            <h4>TIK-TOK</h4>
+                            <h4>LINKEDIN</h4>
+                            <h4>YOUTUBE</h4>
+                            <h4>GOOGLE</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </Page>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
   --pink-accent:'#F5A6DD',
@@ -9,18 +10,19 @@
     font-family: 'Kanit', sans-serif;
     padding: 0;
     margin: 0;
-    background-color: #000;
+    background-color: #161616;
     color:#F5A6DD;
     overflow-x: hidden;
   }
 h1{
-  font-size: 100px;
-  line-height: 1rem;
+  font-size: 120px;
+  line-height: 90px;
 }
 h2{
   font-size: 60px;
     margin: 0;
   padding: 0;
+   line-height: 50px;
 }
 
 h3{
@@ -43,7 +45,7 @@ p{
 }
 @media screen and (max-width:768px) {
   h1{
-  font-size: 60px;
+  font-size: 70px;
     margin: 0;
   padding: 0;  
   line-height: 60px;
@@ -98,6 +100,7 @@ a{
   background-color: #F5A6DD;
   color: #000;
   transition: all ease-in-out 0.5s;
+   border:4px solid #F5A6DD ;
 }
 .button_solid:hover{
   border-radius: 1.75rem;
@@ -118,7 +121,7 @@ a{
   transform: scaleX(1);
 }
 .button_outline::before{
-   content: "";
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -134,7 +137,7 @@ a{
 /* Layout */
 .page {
   width: 100vw;
-  min-height: 100vh;
+  min-height: auto;
   overflow-x: hidden;
   display: flex;
   align-items: center;
@@ -168,23 +171,33 @@ a{
   justify-content: center;
   width: 100%;
   height: auto;
+
+}
+.grid {
+  display: grid;
+  grid-template-columns:1fr 1fr 2fr;  
+  gap: 10px; 
+  justify-items: center;
+  align-items: center;
+  width: 100%;
 }
 
 @media screen and (min-width: 765px) {
 .projects_grid {
   display: grid;
-  grid-template-columns:2fr 2fr; 
-  gap: 20px; 
+  grid-template-columns:1fr 1fr; 
+  gap:10px; 
   justify-items: center;
   align-items: center;
   width: 100%;
 }
 }
+
 /* Info box */
 .info_container{
   width: 20rem;
   height: 3rem;
-  border:#F5A6DD 4px solid ;
+  border:#F5A6DD 3px solid ;
   color: #F5A6DD;
   display: flex;
   align-items: center;
@@ -206,24 +219,32 @@ a{
   width: auto;
   height: auto;
   padding: 0px 30px;
-  border-radius: 3rem;
   transition: ease-in-out 0.2s;
-   border: 4px solid #000;
 }
-.project:hover{
-  background-color: rgb(19, 19, 19);
-  border: 4px solid #F5A6DD;
-}
+
 /* Service Card */
 .service_card {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: auto;
-  height: 15rem;
+  width: 30vw;
+  height: 40vh;
   padding: 20px;
-  border-radius: 2rem;
-  border: solid 4px #F5A6DD;
+  border:#F5A6DD 3px solid ;
+  margin-bottom: 50px;
+  transition: ease-in-out 0.2s;
+}
 
+.service_card h4{
+  width: 10rem;
+  font-weight: normal;
+  padding: 5px;
+  border:#F5A6DD 3px solid ;
+  font-weight:200;
+text-transform :uppercase;
+line-height: 20px;
+}
+.animated_button{
+  background-color: yellow ;
 }

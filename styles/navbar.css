@@ -1,12 +1,8 @@
 .header {
-  width: 100vw;
-  height: 15vh;
-  background-color:#000;
   display: flex;
   align-items: center;
- justify-content: center;
- position: absolute;
- top: 0;
+  justify-content: start;
+  z-index: 3;
 }
 .header_container {
   display: flex;
@@ -14,7 +10,8 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 15vh;
+  height: 10vh;
+  z-index: 3;
 }
 .header_logo{
   color: #F5A6DD;
@@ -38,7 +35,7 @@
   display: flex;
   width: auto; 
   text-decoration: none;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center; 
   align-items: center;
 }
