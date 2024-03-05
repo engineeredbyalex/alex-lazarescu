@@ -8,8 +8,6 @@ import { SolidButton } from '../common/buttons/Button'
 import Info from '../common/info/Info'
 // 
 import Sticker from "@/public/images/sticker_one.png"
-import StickerTwo from "@/public/images/sticker_two.png"
-
 // 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll'
@@ -32,7 +30,7 @@ function LandingPage() {
     return (
         <Page>
             <div className='page_container'>
-                <div style={{ height: '80vh', width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'center', gap: '1rem' }}>
+                <div style={{ height: '90vh', width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'center', gap: '1rem' }}>
                     <RevealWrapper origin='bottom' delay={2800}>
                         <Info />
                     </RevealWrapper>

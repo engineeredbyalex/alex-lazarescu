@@ -1,32 +1,30 @@
-// 
-import HtmlLogo from "@/public/assets/html.svg"
-import CssLogo from "@/public/assets/css.svg"
-import JavaLogo from "@/public/assets/js.svg"
-import ReactLogo from "@/public/assets/react.svg"
-import TailWindLogo from "@/public/assets/tailwind.svg"
-import NextLogo from "@/public/assets/next-js.svg"
-import MongoLogo from "@/public/assets/mongo.svg"
-// 
-import PhotoshopLogo from "@/public/assets/photoshop.svg"
-import PremiereLogo from "@/public/assets/premiere.svg"
-import IllustratorLogo from "@/public/assets/illustrator.svg"
-import AfterEffects from "@/public/assets/aftereffects.svg"
-// 
-import Image from 'next/image'
-// 
-import Headshot from "@/public/images/headshot.jpeg"
-// 
-import { RevealWrapper } from "next-reveal"
-import Page from "../layout/Page"
-
+import { RevealWrapper } from "next-reveal";
+import Page from "../layout/Page";
+import StickerTwo from "@/public/images/sticker_two.png"
+import StickerThree from "@/public/images/sticker_three.png"
+import Image from "next/image";
 
 function AboutMeSection() {
     return (
         <Page>
             <div className="page_container">
-                <div className="">
-
-                </div>
+            <div style={{height:'auto',display:'flex',flexDirection:'column',}}>
+                         <RevealWrapper origin="bottom">
+                    <h3 style={{ textTransform: "uppercase", margin: '60px 0px 60px 0px' }}>ABOUT ME</h3>
+                </RevealWrapper>
+           <div style={{display:'flex',flexDirection:'column', alignItems:"center", justifyContent:'center',gap:'5rem'}}>
+                 <h3 style={{ fontWeight: '300', fontStyle: 'italic', fontFamily: "Playfair Display",width:'100%' }}>
+                    As a seasoned Web Developer Designer with 3 years of experience in building amazing digital experiances, I bring expertise in both branding and art direction to the table. I have a strong passion for UI design, where I aim to create emotionally impactful experiences for users.
+              </h3>
+                 <h3 style={{ fontWeight: '300', fontStyle: 'italic', fontFamily: "Playfair Display",width:'100%' }}>
+                            My skills cover a wide range of digital platforms, including mobile apps, SaaS platforms, landing pages, e-commerce sites, web-apps, and much more.
+              </h3>
+                    </div>
+                    <div>
+                    
+                        <Image  src={StickerThree} />
+                    </div>
+            </div>
             </div>
         </Page>
     )

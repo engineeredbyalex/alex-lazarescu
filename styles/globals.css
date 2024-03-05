@@ -171,6 +171,7 @@ a{
   justify-content: center;
   width: 100%;
   height: auto;
+  gap: 20px;
 
 }
 .grid {
@@ -220,18 +221,31 @@ a{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
   height: 100%;
   padding: 0px 30px;
   transition: ease-in-out 0.2s;
   
-  background-position: center;
-  background-size: cover;
   
 }
 
+
 /* Service Card */
 .service_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 40vh;
+  padding: 20px;
+  border:#F5A6DD 3px solid ;
+  margin-bottom: 50px;
+  transition: ease-in-out 0.2s;
+  gap:30px;
+}
+@media screen and (min-width:768px) {
+  .service_card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -242,6 +256,8 @@ a{
   border:#F5A6DD 3px solid ;
   margin-bottom: 50px;
   transition: ease-in-out 0.2s;
+  gap:30px;
+}
 }
 
 .service_card h4{
@@ -256,9 +272,19 @@ line-height: 20px;
 .animated_button{
   background-color: yellow ;
 }
-@media screen and (max-width:768px) {
-    .sticker {
-    width: 100%;
-    height: 100%;
-  }
-  }
+.sticker {
+  width: 100%;
+  height: 100%;
+}
+.about_grid{
+  display:flex;
+  flex-direction:column;
+}
+@media screen and (min-width:768px) {
+  .about_grid{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+}

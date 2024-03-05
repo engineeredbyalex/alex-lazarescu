@@ -1,13 +1,23 @@
 // importing Page
+import Image from 'next/image';
 import Page from '../layout/Page'
 // importing Reveal Wrapper
 import { RevealWrapper } from 'next-reveal'
+// 
+
+import Sticker from '@/public/images/sticker_three.png';
 
 function ServicesSection() {
     return (
         <Page>
             <div className='page_container'>
-                <h3 style={{ textTransform: "uppercase", margin: '60px 0px 60px 0px' }}>Services</h3>
+
+                <RevealWrapper origin="bottom">
+                    <h3 style={{ textTransform: "uppercase", margin: '60px 0px 60px 0px' }}>Services</h3>
+                </RevealWrapper>
+                {/* <div style={{ position: 'absolute', top: '210%', zIndex: '1', }}>
+                    <Image className="sticker" src={Sticker} />
+                </div> */}
                 <div className='projects_grid' >
                     <div className='service_card'>
                         <h3>WEB DEVELOPMENT</h3>
