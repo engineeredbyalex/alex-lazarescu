@@ -32,11 +32,12 @@ function LandingPage() {
     return (
         <Page>
             <div className='page_container'>
-                <div style={{ height: '80vh', width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'center', gap: '2rem' }}>
+                <div style={{ height: '80vh', width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'center', gap: '1rem' }}>
                     <RevealWrapper origin='bottom' delay={2800}>
                         <Info />
                     </RevealWrapper>
-                    <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'center', gap: '0.5rem' }}>
+
+                    <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'center', gap: '5rem' }}>
                         <RevealWrapper delay={1000} origin='bottom'>
                             <h1 style={{ fontWeight: '600', fontStyle: 'italic', fontFamily: "Playfair Display" }}>
                                 Alexandru<br /> Lazarescu
@@ -49,9 +50,6 @@ function LandingPage() {
                         </RevealWrapper>
                         <div style={{ position: "absolute", zIndex: '-1' }}>
                             <Image className='sticker' src={Sticker}></Image>
-                        </div>
-                        <div style={{ position: "absolute", top: '82%', zIndex: '-1', }}>
-                            <Image className='sticker' src={StickerTwo}></Image>
                         </div>
                 </div>
                     <RevealWrapper delay={2200} origin='bottom'>

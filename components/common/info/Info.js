@@ -4,7 +4,7 @@ function Info() {
     return (
         <div className='info_container'>
             <span className='info_state'></span>
-            <p>4 of 4 spots remaining in March</p>
+            <h5>4 of 4 spots remaining in March</h5>
         </div>
     )
 }

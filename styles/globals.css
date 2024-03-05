@@ -195,14 +195,18 @@ a{
 
 /* Info box */
 .info_container{
-  width: 20rem;
+  width: 15rem;
   height: 3rem;
-  border:#F5A6DD 3px solid ;
+  border:#F5A6DD 2px solid ;
   color: #F5A6DD;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   border-radius: 2rem;
+ 
+}
+.info_container h5{ 
+   font-weight: 400;
 }
 .info_state{
   height: 1rem;
@@ -216,10 +220,14 @@ a{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   padding: 0px 30px;
   transition: ease-in-out 0.2s;
+  
+  background-position: center;
+  background-size: cover;
+  
 }
 
 /* Service Card */

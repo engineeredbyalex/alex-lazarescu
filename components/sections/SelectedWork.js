@@ -8,7 +8,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 // importing button
 import { OutlineButton } from '../common/buttons/Button'
-
+// 
+import StickerThree from "@/public/images/sticker_three.png"
+// 
+import Image from 'next/image';
 
 function SelectedWork() {
     const [projects, setProjects] = useState([]);
@@ -24,6 +27,7 @@ function SelectedWork() {
         <Page>
             <div className="page_container">
                 <h3 style={{ textTransform: "uppercase", margin: '60px 0px 60px 0px' }}>Featured Projects</h3>
+
                 <div className='projects_grid'>
                     {projects.slice(0, 4).map(project => (
                         <div key={project._id} className='project '>
