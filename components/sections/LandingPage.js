@@ -57,7 +57,7 @@ function LandingPage() {
                     <RevealWrapper delay={2200} origin='bottom'>
                         <Link className='animated_button' href='/contact'>
                             <h4 style={{ lineHeight: '35px', fontWeight: '300', fontFamily: "Kanit", textTransform: "uppercase" }}>
-                                Let's Work Togheter
+                                Lets Work Togheter
                             </h4>
                         </Link>
                     </RevealWrapper>
