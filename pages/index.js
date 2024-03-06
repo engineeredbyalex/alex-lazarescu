@@ -3,6 +3,7 @@ import Navigation_Bar from "@/components/common/header/Header";
 import LandingPage from "@/components/sections/LandingPage";
 import SelectedWork from "@/components/sections/SelectedWork";
 import AboutMeSection from '@/components/sections/AboutMeSection';
+import ContactSection from '@/components/sections/ContactSection';
 
 
 
@@ -17,6 +18,7 @@ export default function Home() {
       <LandingPage />
       <SelectedWork />
       <AboutMeSection />
+      <ContactSection/>
     </div>
   );
 }
